@@ -1,0 +1,176 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: Atlas Database</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link">Related</a>
+
+				<div class="navbar-dropdown is-right"> <a class="navbar-item" href="../documentation/config_general.html">General Configuration</a>				</div> <!-- navbar-dropdown -->
+			</div> <!-- navbar-item -->
+		</div> <!-- navbar-end -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../atlas_database.html">Atlas Database</a></li>
+		<li><a href="../miscellaneous.html">Miscellaneous</a></li>
+		<li><a href="../documentation.html">Documentation</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/basics.html">Basics</a>
+		</li>
+		<li><a  href="../documentation/views.html">Views</a>
+		</li>
+		<li><a  href="../documentation/config.html">Configuration</a>
+		</li>
+		<li><a  href="../documentation/miscellaneous.html">Miscellaneous</a>
+	<ul class="menu-list">
+		<li><a class ='is-active' href="../documentation/atlas_database.html">Atlas Database</a>
+		</li>
+		<li><a  href="../documentation/print.html">Printing Charts</a>
+		</li>
+		<li><a  href="../documentation/translation.html">Translation</a>
+		</li>
+		<li><a  href="../documentation/git.html">Git Repository</a>
+		</li>
+		<li><a  href="../documentation/cli.html">Command Line Interface</a>
+		</li>
+		<li><a  href="../documentation/directories.html">Directory Layout</a>
+		</li>
+		<li><a  href="../documentation/charset.html">Character Sets</a>
+		</li>
+		<li><a  href="../documentation/font.html">Symbol Font</a>
+		</li>
+	</ul>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>Atlas Database</h1>
+<p>This page explains the internals of the database and gives some hints
+for user defined actions on the data.</p>
+<h2>Database Format</h2>
+<p>The database is based upon <a href="http://wxsqlite.sourceforge.net">wxsqlite</a>
+which is a wrapper around the <a href="http://www.sqlite.org">SQLite 3</a>
+database.</p>
+<p><strong>Example</strong></p>
+<p>Start the command line tool and show a list of available tables.</p>
+<pre><code>~/.maitreya-7.0&gt; sqlite3 geonames.db
+SQLite version 3.6.22
+Enter &quot;.help&quot; for instructions
+Enter SQL statements terminated with a &quot;;&quot;
+sqlite&gt; .tables
+admincodes atlas_ascii geonames
+atlas countries geonames_aliases
+atlas_alias featurecodes timezones
+sqlite&gt;
+</code></pre>
+<h2>Import Location Data</h2>
+<p>The atlas database contains data from
+<a href="http://www.geonames.org">geonames.org</a>. The source code distribution of
+Maitreya contains a perl script (src/atlas/geonames.pl) that can be used
+for user defined import or update of the atlas data.</p>
+<p>Example steps</p>
+<ul>
+<li>Open the script and download the referenced files from the geonames
+download area</li>
+<li>There are several versions of the geonames data: cities with more
+than 1000 or 10,000 inhabitants, or the full data</li>
+<li>Open the SQLite database with the command line tool</li>
+<li>Execute the DDL file with table definitions (src/db_ddl.sql). The
+SQLite command is &quot;.read&quot;</li>
+<li>Start the perl script</li>
+<li>Set the new database file in Configuration/Atlas if necessary</li>
+<li>Export can be done with the command &quot;.output&quot;. The result will be
+similar to the default database script in src/geonames1000.sql</li>
+</ul>
+<h2><a id="user_defined_entries"></a>Filtering User Defined Entries</h2>
+<p>User defined changes of the database are marked internally. So a
+separate export of these records is possible.</p>
+<p>The table &quot;geonames&quot; has a column &quot;usercode&quot; with values</p>
+<ul>
+<li>0: not modified</li>
+<li>1: entry was changed by the user</li>
+<li>2: entry was added by the user</li>
+</ul>
+<p><strong>Example</strong></p>
+<pre><code>~/.maitreya-7.0&gt; sqlite3 geonames.db
+SQLite version 3.7.9 2011-11-01 00:52:41
+Enter &quot;.help&quot; for instructions
+Enter SQL statements terminated with a &quot;;&quot;
+sqlite&gt; select usercode,count(*) from geonames group by usercode;
+0|123392
+1|8
+2|7
+sqlite&gt;
+</code></pre>
+<p>In the example 8 records were changed, 7 records were added.</p>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../documentation/miscellaneous.html">↑ Miscellaneous</a><a class="button is-small" href="../documentation/print.html">Printing Charts →</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2022-12-12.
+			</div>
+		</footer>
+	</body>
+</html>
+

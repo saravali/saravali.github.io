@@ -1,0 +1,194 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: Printing Charts</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link">Related</a>
+
+				<div class="navbar-dropdown is-right"> <a class="navbar-item" href="../documentation/config_general.html">General Configuration</a>				</div> <!-- navbar-dropdown -->
+			</div> <!-- navbar-item -->
+		</div> <!-- navbar-end -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../print.html">Printing Charts</a></li>
+		<li><a href="../miscellaneous.html">Miscellaneous</a></li>
+		<li><a href="../documentation.html">Documentation</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/basics.html">Basics</a>
+		</li>
+		<li><a  href="../documentation/views.html">Views</a>
+		</li>
+		<li><a  href="../documentation/config.html">Configuration</a>
+		</li>
+		<li><a  href="../documentation/miscellaneous.html">Miscellaneous</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/atlas_database.html">Atlas Database</a>
+		</li>
+		<li><a class ='is-active' href="../documentation/print.html">Printing Charts</a>
+		</li>
+		<li><a  href="../documentation/translation.html">Translation</a>
+		</li>
+		<li><a  href="../documentation/git.html">Git Repository</a>
+		</li>
+		<li><a  href="../documentation/cli.html">Command Line Interface</a>
+		</li>
+		<li><a  href="../documentation/directories.html">Directory Layout</a>
+		</li>
+		<li><a  href="../documentation/charset.html">Character Sets</a>
+		</li>
+		<li><a  href="../documentation/font.html">Symbol Font</a>
+		</li>
+	</ul>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>Printing Charts</h1>
+<p>The printout of Maitreya has been re-implemented in version 4.0. The new
+philosophy of printout is based upon Pdf documents. This approach
+eliminated various pitfalls of platform dependent printout (e.g. font
+sizes, page feeds) and enables the printout for web applications.
+Printouts can easily be exchanged via email.</p>
+<p>The program generates Pdf files and stores them to the file system.
+These files can be viewed with a standard Pdf viewer like <em>xpdf</em> or
+<em>Acrobat Reader.</em></p>
+<p>The type of printout can be configured in the configuration dialog or in
+the print configuration dialog.</p>
+<h2>Print Commands</h2>
+<p>There are 2 print commands</p>
+<ol>
+<li>Standard Print Command: Choose <em>Document-&gt;Print</em>, check the
+<em>print button</em> in the tool bar or type <em>Ctrl+P</em>. The print
+configuration dialog will pop up and lets you choose your desired
+printout. The pre-selected printout can be configured in the
+configuration dialog. (Apprearance tab).</li>
+<li>Quick Print Command: Choose <em>Document-&gt; Quick Print</em> or type
+<em>Shift+Ctrl+P</em> to generate a document according to the configured
+default printout..</li>
+</ol>
+<h2>Printout Types</h2>
+<p>There are several different printout types. These types can be
+configured in a separate file (printout.dat).</p>
+<table>
+<thead>
+<tr>
+<th>No.</th>
+<th>Printout Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Vedic Default</td>
+<td>List of Planets including Nakshatras, Rasi and Navamsa Chart, Vimsottari Dasa (similar to old 3.x printout).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Western Default</td>
+<td>List of planets, western chart (similar to old 3.x printout).</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Vedic KP</td>
+<td>Like (1) but with KP lords.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Western Uranian</td>
+<td>Like (2) but with Uranian planets, no houses.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Vedic Comprehensive</td>
+<td>Multipage printout with various Vargas, Vimsottari and Kalachakra Dasa.</td>
+</tr>
+</tbody>
+</table>
+<p>Other printouts can easily configured. Users are encouraged to define
+their own printouts and commit them for the benefit of the community.</p>
+<h2>Launching the Pdf Viewer</h2>
+<p>The Pdf Viever can be launched automatically after creation of the Pdf
+document. This feature can be enabled in the configuration dialog
+(appearance tab). Details depend upon the operating system.</p>
+<h3>Windows Notes</h3>
+<p>Start of the Pdf Viewer depends upon the Windows configuration for the
+mimetype <em>application/Pdf</em>. This configuration will usually launch an
+<em>Acrobat Reader</em>.</p>
+<h3>Linux/BSD 4.4 Notes</h3>
+<p>An appropiate Pdf Viewer will be searched along the path if you execute
+the print command for the first time. The program will search for <em>xpdf</em>
+and <em>kghostview</em> and store the information in the configuration. You can
+change the viewer in the appearance tab of the configuration dialog.</p>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../documentation/atlas_database.html">← Atlas Database</a><a class="button is-small" href="../documentation/miscellaneous.html">↑ Miscellaneous</a><a class="button is-small" href="../documentation/translation.html">Translation →</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2018-04-28.
+			</div>
+		</footer>
+	</body>
+</html>
+

@@ -1,0 +1,324 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: Directory Layout</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../directories.html">Directory Layout</a></li>
+		<li><a href="../miscellaneous.html">Miscellaneous</a></li>
+		<li><a href="../documentation.html">Documentation</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/basics.html">Basics</a>
+		</li>
+		<li><a  href="../documentation/views.html">Views</a>
+		</li>
+		<li><a  href="../documentation/config.html">Configuration</a>
+		</li>
+		<li><a  href="../documentation/miscellaneous.html">Miscellaneous</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/atlas_database.html">Atlas Database</a>
+		</li>
+		<li><a  href="../documentation/print.html">Printing Charts</a>
+		</li>
+		<li><a  href="../documentation/translation.html">Translation</a>
+		</li>
+		<li><a  href="../documentation/git.html">Git Repository</a>
+		</li>
+		<li><a  href="../documentation/cli.html">Command Line Interface</a>
+		</li>
+		<li><a class ='is-active' href="../documentation/directories.html">Directory Layout</a>
+		</li>
+		<li><a  href="../documentation/charset.html">Character Sets</a>
+		</li>
+		<li><a  href="../documentation/font.html">Symbol Font</a>
+		</li>
+	</ul>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>Directory Layout</h1>
+<p>This chapter explains the platform dependent directory layout of the
+application.</p>
+<h2>Directory Types</h2>
+<p>The types are</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PROGRAMDIR</td>
+<td>Binaries</td>
+</tr>
+<tr>
+<td>DATADIR</td>
+<td>Basic data directory</td>
+</tr>
+<tr>
+<td>RESOURCESDIR</td>
+<td>Configs for charts etc.</td>
+</tr>
+<tr>
+<td>LANGUAGEDIR</td>
+<td>Translations</td>
+</tr>
+<tr>
+<td>CONFIGDIR</td>
+<td>personal configuration</td>
+</tr>
+</tbody>
+</table>
+<p>Platform dependent directories are</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Platform</th>
+<th>Directory</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PROGRAMDIR</td>
+<td>Windows</td>
+<td>c:Program Files (x86)Maitreya8</td>
+<td>Depends on language and installation.</td>
+</tr>
+<tr>
+<td></td>
+<td>Linux + 4.4 BSD</td>
+<td>$prefix/bin</td>
+<td>Prefix is usually /usr/local (GNU) or /usr (most Linuxes)</td>
+</tr>
+<tr>
+<td></td>
+<td>Mac OS x</td>
+<td>Maitreya8.app/Contents</td>
+<td></td>
+</tr>
+<tr>
+<td>DATADIR</td>
+<td>Windows</td>
+<td>PROGRAMDIR</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Linux + 4.4 BSD</td>
+<td>$prefix/maitreya8</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Mac OS x</td>
+<td>Maitreya8.app/Resources</td>
+<td></td>
+</tr>
+<tr>
+<td>RESOURCESDIR</td>
+<td>Windows</td>
+<td>PROGRAMDIRresources</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Linux + 4.4 BSD</td>
+<td>DATADIR/resources</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Mac OS x</td>
+<td>DATADIR</td>
+<td></td>
+</tr>
+<tr>
+<td>LANGUAGEDIR</td>
+<td>Windows</td>
+<td>PROGRAMDIR</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Linux + 4.4 BSD</td>
+<td>$prefix/share/locale</td>
+<td>With subdirectories for language and messages, e.g. /usr/share/locale/de/LC_MESSAGES</td>
+</tr>
+<tr>
+<td></td>
+<td>Mac OS x</td>
+<td>DATADIR</td>
+<td></td>
+</tr>
+<tr>
+<td>CONFIGDIR</td>
+<td>Windows</td>
+<td>c:Users<em>username</em>.maitreya-8.0</td>
+<td>Depends on user name and Windows version</td>
+</tr>
+<tr>
+<td></td>
+<td>Linux + 4.4 BSD</td>
+<td>$HOME/.maitreya-8.0</td>
+<td>Depends on user name</td>
+</tr>
+<tr>
+<td></td>
+<td>Mac OS x</td>
+<td>$HOME/.maitreya-8.0</td>
+<td>Depends on user name</td>
+</tr>
+</tbody>
+</table>
+<h2>Details</h2>
+<h3>Global configuration file</h3>
+<p>File name: CONFIGDIR/config.json</p>
+<p>The file stores most parameters of the configuration dialog and several
+convenience options, e.g. window sizes. The file is read on startup and
+written when the application closes. It can be saved using the menu
+command <em>Extras → Save Configuration</em>, too.</p>
+<h3>The location database</h3>
+<p>File name: CONFIGDIR/geonames.db</p>
+<p>This is a SQLite3 database file. It is created from an SQL dump
+<em>geonames1000.sql</em> in DATADIR/atlas on the first startup of the atlas
+dialog.</p>
+<p>See the <a href="../documentation/atlas_database.html">Atlas Database</a> page for more information.</p>
+<h3>Sheet configuration file</h3>
+<p>It is copied to CONFIGDIR on the the first startup and contains the
+configuration of sheets and tables (config dialog tab <em>User interface</em>).</p>
+<h3>JSON Files for Yogas, Dasas, charts, printouts and Multiple Views</h3>
+<p>These files have generally two locations</p>
+<ul>
+<li>Global under $RESOURCESDIR</li>
+<li>Personal under $CONFIGDIR. You can create the corresponding
+directory and place your own files there.</li>
+</ul>
+<p>The global files are provided by the official release, local files are
+additions by the user.</p>
+<p>In the source code tree the global files are located under
+src/resources.</p>
+<p>Order of files: first the global directory is read in alphabetical
+order, then the local directory.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Directory</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Western Charts</td>
+<td>wchart</td>
+<td></td>
+</tr>
+<tr>
+<td>Multiple Views</td>
+<td>mview</td>
+<td></td>
+</tr>
+<tr>
+<td>Vedic Charts</td>
+<td>vchart</td>
+<td></td>
+</tr>
+<tr>
+<td>Printout</td>
+<td>print</td>
+<td></td>
+</tr>
+<tr>
+<td>Yogas</td>
+<td>yogas</td>
+<td>Only local files are used. They are copied on the first startup</td>
+</tr>
+<tr>
+<td>Dasa Texts</td>
+<td>dasas</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Images</h3>
+<p>The images are located in the directory DATADIR/pics. The pictures can
+be used as background for graphical Dasa display or custom chart graphic
+configuration. Only small pictures are recommended (performance).</p>
+<h3>The True Type font</h3>
+<p>The font <em>Saravali.ttf</em> is located in the directory DATADIR/fonts.</p>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../documentation/cli.html">← Command Line Interface</a><a class="button is-small" href="../documentation/miscellaneous.html">↑ Miscellaneous</a><a class="button is-small" href="../documentation/charset.html">Character Sets →</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2022-12-16.
+			</div>
+		</footer>
+	</body>
+</html>
+

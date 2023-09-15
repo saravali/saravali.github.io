@@ -1,0 +1,215 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: Custom Periods</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link">Related</a>
+
+				<div class="navbar-dropdown is-right"> <a class="navbar-item" href="../documentation/config_general.html">General Configuration</a> <a class="navbar-item" href="../documentation/config_vedic.html">Configuration: Vedic Astrology</a> <a class="navbar-item" href="../documentation/config_western.html">Configuration: Western Astrology</a>				</div> <!-- navbar-dropdown -->
+			</div> <!-- navbar-item -->
+		</div> <!-- navbar-end -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../aya_custom.html">Custom Periods</a></li>
+		<li><a href="../ayanamsa.html">Ayanamsa</a></li>
+		<li><a href="../astrology.html">Astrology</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+	<ul class="menu-list">
+		<li><a  href="../astrology/objects.html">Astrological Objects</a>
+		</li>
+		<li><a  href="../astrology/properties.html">Astrological Properties</a>
+		</li>
+		<li><a  href="../astrology/housesystems.html">House Systems</a>
+		</li>
+		<li><a  href="../astrology/calculation.html">Calculation</a>
+		</li>
+		<li><a  href="../astrology/ayanamsa.html">Ayanamsa</a>
+	<ul class="menu-list">
+		<li><a  href="../astrology/aya_basics.html">Astronomical Basics</a>
+		</li>
+		<li><a class ='is-active' href="../astrology/aya_custom.html">Custom Periods</a>
+		</li>
+		<li><a  href="../astrology/aya_examples.html">Examples</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../astrology/dignities.html">Dignities of Planets</a>
+		</li>
+		<li><a  href="../astrology/vargas.html">Vargas (Divisions)</a>
+		</li>
+		<li><a  href="../astrology/hora.html">Hora</a>
+		</li>
+		<li><a  href="../astrology/nakshatra.html">Nakshatras</a>
+		</li>
+		<li><a  href="../astrology/kpastrology.html">Krishnamurti Paddhati</a>
+		</li>
+		<li><a  href="../astrology/kalavelas.html">Upagrahas and Kala Velas</a>
+		</li>
+		<li><a  href="../astrology/drishti.html">Drishtis (Aspects)</a>
+		</li>
+		<li><a  href="../astrology/jaimini.html">Jaimini Astrology</a>
+		</li>
+		<li><a  href="../astrology/ashtakavarga.html">Ashtakavarga</a>
+		</li>
+		<li><a  href="../astrology/dasas.html">Nakshatra Dasas</a>
+		</li>
+		<li><a  href="../astrology/kalachakra.html">Kalachakra Dasa</a>
+		</li>
+		<li><a  href="../astrology/astakoota.html">Asta Koota</a>
+		</li>
+		<li><a  href="../astrology/sbc.html">Sarvatobhadra</a>
+		</li>
+		<li><a  href="../astrology/shadbala.html">Shadbala</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>Custom Periods</h1>
+<p>The astronomical model of precession asumes that the current movement of
+the vernal point is a constant motion.</p>
+<p>This model guides to a period of 25771 years until the vernal point
+returns to its initial point. But this number can be wrong if the motion
+of the vernal point has long term fluctuations. Such an effect may be
+caused by unknown galatical phenomenons or fluctuations in gravitational
+fields.</p>
+<h1>Custom Ayanamsa in Maitreya</h1>
+<p>Can be configured in the configuration dialog, see
+<a href="../documentation/config_general.html#ephem">Ephemeris</a>.</p>
+<p>Standard configuration of custom Ayanamsa is based upon a reference
+value at a given date (normally Jan 01 1990 = 2415020.5).</p>
+<ul>
+<li>Date t0 - reference date for Ayanamsa. Format is <em>julian date</em>.</li>
+<li>Ayanamsa at t0 - value at the date t0. Format of this field is
+<em>double</em>.</li>
+<li>The <em>constant period</em> can be used to change the speed of vernal
+point movement.</li>
+</ul>
+<blockquote>
+<h4>Danger</h4>
+<p>Caution: changes of these parameters can cause major calculation errors!</p>
+</blockquote>
+<h2>Sri Yukteswar's View</h2>
+<p>Sri Yukteswar exposes his view about the yugas and the movement of the
+vernal point in the first chapter of his illustrious book <em>The Holy
+Science</em> (Kalyana Darshanam).</p>
+<p>According to the <em>Holy Science</em> the period for the movement of the
+vernal point is 24,000 years.</p>
+<p>Sri Yukteswarji combines the movement of the vernal point with the
+theory of the Yugas. According to his view Kali Yuga's duration is 2400
+years (ascending and descending each 1200), and the start of ascending
+Kali Yuga begins when the vernal point is 0 Aries. Dwapara Yuga follows
+and has double duration, each Treta Yuga has 3600 years and each Satya
+Yuga 4800 years.</p>
+<p>Therefore we have the sequence of Yugas shown in the table below.</p>
+<p>Yuga                   Duration (Years)   Vernal Point (Start)   Vernal Point (End)</p>
+<hr />
+<p>Kali (ascending)       1200               00 Aries               12 Pisces
+Dwapara (ascending)    2400               12 Pisces              06 Aquarius
+Treta (ascending)      3600               06 Aquarius            18 Scorpio
+Satya (ascending)      4800               18 Scorpio             00 Libra
+Satya (descending)     4800               00 Libra               18 Cancer
+Treta (descending)     3600               18 Cancer              24 Taurus
+Dwapara (descending)   2400               24 Taurus              18 Aries
+Kali (descending)      1200               18 Aries               00 Aries
+Total                  24,000</p>
+<h2>Emulating Sri Yukteswar's Ayanamsa</h2>
+<p>This ayanamsa can be emulated with several methods.</p>
+<h3>1. Using the Ayanamsa with the astronomical period</h3>
+<p>First method of emulation is to take a fixed start date with known
+Ayanamsa and use the astronomical period. This is what the Sri Yukteswar
+Ayanamsa of swiss ephemeris does.</p>
+<p>Disadvantage of this method is that long term predictions are not
+correct because the period is wrong.</p>
+<h3>2. Define a Custom Period</h3>
+<p>Second method is to take (again) a fixed start date with known Ayanamsa,
+but to use the period of 24,000 years given by Sri Yukteswar. This kind
+of calculation can be configured in Maitreya.</p>
+<p>Disadvantage of the method is that the actual true movement of the
+vernal point is neglected.</p>
+<h3>3. Define a Movement that Satifies Astronomical Precession and the Given Period</h3>
+<p>This method is a mix of the above methods. It assumes that the current
+precession is correct but has sigificant fluctuations that lead to a
+total period of 24,000 years.</p>
+<p>The current precession is too slow to get a period of 24,000 years. So
+it must be near a minimum. The speed must grow in later periods to get
+the desired total period.</p>
+<p>Possible positions for the minimum could be the point 0 Aries or the
+point in opposite to the supergalactic center (i.e. around 26 Pisces).</p>
+<h2>Concluding Thaughts</h2>
+<p>It is possible to give mathematical equations for the 3rd method. A
+simple eliptic equation could be satisfiying for the first time.</p>
+<p>Investigations regarding long term Ayanamsa can be made taking old
+sources that rely on chitra paksha (i.e. Lahiri) ayanamsa. Most
+contemporary authors do not rely on old sources and pretend that they
+are not correctly calculated.</p>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../astrology/aya_basics.html">← Astronomical Basics</a><a class="button is-small" href="../astrology/ayanamsa.html">↑ Ayanamsa</a><a class="button is-small" href="../astrology/aya_examples.html">Examples →</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2022-12-14.
+			</div>
+		</footer>
+	</body>
+</html>
+

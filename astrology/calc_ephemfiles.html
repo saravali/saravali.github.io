@@ -1,0 +1,289 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: Ephemeris Data Files</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link">Related</a>
+
+				<div class="navbar-dropdown is-right"> <a class="navbar-item" href="../documentation/config_general.html">General Configuration</a>				</div> <!-- navbar-dropdown -->
+			</div> <!-- navbar-item -->
+		</div> <!-- navbar-end -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../calc_ephemfiles.html">Ephemeris Data Files</a></li>
+		<li><a href="../calculation.html">Calculation</a></li>
+		<li><a href="../astrology.html">Astrology</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+	<ul class="menu-list">
+		<li><a  href="../astrology/objects.html">Astrological Objects</a>
+		</li>
+		<li><a  href="../astrology/properties.html">Astrological Properties</a>
+		</li>
+		<li><a  href="../astrology/housesystems.html">House Systems</a>
+		</li>
+		<li><a  href="../astrology/calculation.html">Calculation</a>
+	<ul class="menu-list">
+		<li><a  href="../astrology/calc_options.html">Calculation Options</a>
+		</li>
+		<li><a class ='is-active' href="../astrology/calc_ephemfiles.html">Ephemeris Data Files</a>
+		</li>
+		<li><a  href="../astrology/calc_examples.html">Calculation Examples</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../astrology/ayanamsa.html">Ayanamsa</a>
+		</li>
+		<li><a  href="../astrology/dignities.html">Dignities of Planets</a>
+		</li>
+		<li><a  href="../astrology/vargas.html">Vargas (Divisions)</a>
+		</li>
+		<li><a  href="../astrology/hora.html">Hora</a>
+		</li>
+		<li><a  href="../astrology/nakshatra.html">Nakshatras</a>
+		</li>
+		<li><a  href="../astrology/kpastrology.html">Krishnamurti Paddhati</a>
+		</li>
+		<li><a  href="../astrology/kalavelas.html">Upagrahas and Kala Velas</a>
+		</li>
+		<li><a  href="../astrology/drishti.html">Drishtis (Aspects)</a>
+		</li>
+		<li><a  href="../astrology/jaimini.html">Jaimini Astrology</a>
+		</li>
+		<li><a  href="../astrology/ashtakavarga.html">Ashtakavarga</a>
+		</li>
+		<li><a  href="../astrology/dasas.html">Nakshatra Dasas</a>
+		</li>
+		<li><a  href="../astrology/kalachakra.html">Kalachakra Dasa</a>
+		</li>
+		<li><a  href="../astrology/astakoota.html">Asta Koota</a>
+		</li>
+		<li><a  href="../astrology/sbc.html">Sarvatobhadra</a>
+		</li>
+		<li><a  href="../astrology/shadbala.html">Shadbala</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>Ephemeris Data Files</h1>
+<p>This chapter describes the installation of Swiss Ephemeris data files.</p>
+<p>Installation steps are</p>
+<ul>
+<li>Download the data files (see below)</li>
+<li>Open the configuration dialog, select the
+<a href="../documentation/config_general.html#ephem">Ephemeris</a> tab</li>
+<li>Click the button for <em>ephemeris data files</em> selection, choose the
+directory of the files</li>
+</ul>
+<h2>Astronomical Background</h2>
+<p>Standard calculation of the program is according to the built-in Moshier
+ephemeris. The ephemeris is quite good, but it is possible to increase
+the precision with the Swiss Ephemeris data files.</p>
+<p>Precision of Moshier ephemeris is about 1 second of arc. The ephemeris
+covers the time interval from 3000 BC to 3000 AD.</p>
+<p>Data files can be downloaded from <a href="http://www.astro.com">Astrodienst
+Zürich</a>. The data files have time intervals of 600
+years each. Maximum time of validity is from 5401 BC to 5399 AD.</p>
+<p>The URL of the download directory is
+<a href="ftp://ftp.astro.com/pub/swisseph/ephe/">ftp://ftp.astro.com/pub/swisseph/ephe/</a>.</p>
+<h2>Types of Data Files</h2>
+<p>There are several different types of data files.</p>
+<ul>
+<li>Planetary data files - used for all planets Sun, .. Pluto (without
+Moon).</li>
+<li>Moon files - special files for the Moon</li>
+<li>Main asteroid files - used for planetoids Ceres, .. Vesta, Chiron
+and Pholus</li>
+</ul>
+<p>All files are valid for 600 years. The table below summarizes the
+available files.</p>
+<table>
+<thead>
+<tr>
+<th>Time Range</th>
+<th>Planetary File</th>
+<th>Moon File</th>
+<th>Asteroid File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5401 BC - 4802 BC</td>
+<td>seplm54.se1</td>
+<td>semom54.se1</td>
+<td>seasm54.se1</td>
+</tr>
+<tr>
+<td>4801 BC - 4202 BC</td>
+<td>seplm48.se1</td>
+<td>semom48.se1</td>
+<td>seasm48.se1</td>
+</tr>
+<tr>
+<td>4201 BC - 3602 BC</td>
+<td>seplm42.se1</td>
+<td>semom42.se1</td>
+<td>seasm42.se1</td>
+</tr>
+<tr>
+<td>3601 BC - 3002 BC</td>
+<td>seplm36.se1</td>
+<td>semom36.se1</td>
+<td>seasm36.se1</td>
+</tr>
+<tr>
+<td>3001 BC - 2402 BC</td>
+<td>seplm30.se1</td>
+<td>semom30.se1</td>
+<td>seasm30.se1</td>
+</tr>
+<tr>
+<td>2401 BC - 1802 BC</td>
+<td>seplm24.se1</td>
+<td>semom24.se1</td>
+<td>seasm24.se1</td>
+</tr>
+<tr>
+<td>1801 BC - 1202 BC</td>
+<td>seplm18.se1</td>
+<td>semom18.se1</td>
+<td>seasm18.se1</td>
+</tr>
+<tr>
+<td>1201 BC - 602 BC</td>
+<td>seplm12.se1</td>
+<td>semom12.se1</td>
+<td>seasm12.se1</td>
+</tr>
+<tr>
+<td>601 BC - 2 BC</td>
+<td>seplm06.se1</td>
+<td>semom06.se1</td>
+<td>seasm06.se1</td>
+</tr>
+<tr>
+<td>1 BC - 599 AD</td>
+<td>sepl_00.se1</td>
+<td>semo_00.se1</td>
+<td>seas_00.se1</td>
+</tr>
+<tr>
+<td>600 AD - 1199 AD</td>
+<td>sepl_06.se1</td>
+<td>semo_06.se1</td>
+<td>seas_06.se1</td>
+</tr>
+<tr>
+<td>1200 AD - 1799 AD</td>
+<td>sepl_12.se1</td>
+<td>semo_12.se1</td>
+<td>seas_12.se1</td>
+</tr>
+<tr>
+<td>1800 AD - 2399 AD</td>
+<td>sepl_18.se1</td>
+<td>semo_18.se1</td>
+<td>seas_18.se1</td>
+</tr>
+<tr>
+<td>2400 AD - 2999 AD</td>
+<td>sepl_24.se1</td>
+<td>semo_24.se1</td>
+<td>seas_24.se1</td>
+</tr>
+<tr>
+<td>3000 AD - 3599 AD</td>
+<td>sepl_30.se1</td>
+<td>semo_30.se1</td>
+<td>seas_30.se1</td>
+</tr>
+<tr>
+<td>3600 AD - 4199 AD</td>
+<td>sepl_36.se1</td>
+<td>semo_36.se1</td>
+<td>seas_36.se1</td>
+</tr>
+<tr>
+<td>4200 AD - 4799 AD</td>
+<td>sepl_42.se1</td>
+<td>semo_42.se1</td>
+<td>seas_42.se1</td>
+</tr>
+<tr>
+<td>4800 AD - 5399 AD</td>
+<td>sepl_48.se1</td>
+<td>semo_48.se1</td>
+<td>seas_48.se1</td>
+</tr>
+</tbody>
+</table>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../astrology/calc_options.html">← Calculation Options</a><a class="button is-small" href="../astrology/calculation.html">↑ Calculation</a><a class="button is-small" href="../astrology/calc_examples.html">Calculation Examples →</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2022-12-14.
+			</div>
+		</footer>
+	</body>
+</html>
+

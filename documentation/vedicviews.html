@@ -1,0 +1,332 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: Vedic Views</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link">Related</a>
+
+				<div class="navbar-dropdown is-right"> <a class="navbar-item" href="../documentation/otherviews.html">Other Astrological Views</a> <a class="navbar-item" href="../documentation/generalviews.html">General Views</a> <a class="navbar-item" href="../documentation/otherviews.html">Other Astrological Views</a> <a class="navbar-item" href="../documentation/generalviews.html">General Views</a> <a class="navbar-item" href="../astrology/sbc.html">Sarvatobhadra</a> <a class="navbar-item" href="../astrology/dasas.html">Nakshatra Dasas</a> <a class="navbar-item" href="../astrology/kalachakra.html">Kalachakra Dasa</a>				</div> <!-- navbar-dropdown -->
+			</div> <!-- navbar-item -->
+		</div> <!-- navbar-end -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../vedicviews.html">Vedic Views</a></li>
+		<li><a href="../views.html">Views</a></li>
+		<li><a href="../documentation.html">Documentation</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/basics.html">Basics</a>
+		</li>
+		<li><a  href="../documentation/views.html">Views</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/generalviews.html">General Views</a>
+		</li>
+		<li><a class ='is-active' href="../documentation/vedicviews.html">Vedic Views</a>
+		</li>
+		<li><a  href="../documentation/westernviews.html">Western Views</a>
+		</li>
+		<li><a  href="../documentation/otherviews.html">Other Astrological Views</a>
+		</li>
+		<li><a  href="../documentation/dialogs.html">Dialogs</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../documentation/config.html">Configuration</a>
+		</li>
+		<li><a  href="../documentation/miscellaneous.html">Miscellaneous</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>Vedic Views</h1>
+<p>These views are used in Vedic astrology. See the
+<a href="../documentation/generalviews.html">General Views</a> page for views that are shared between
+Vedic and western astrology.</p>
+<h2><a id="chart"></a>Vedic Chart View</h2>
+<p>The Vedic chart shows a graphical representation of all supported Vargas
+including the Bhava chart. See the pages <a href="../astrology/vargas.html">Vargas (Divisions)</a> for details.</p>
+<p>The chart is displayed either in South, North and East Indian style.This
+option and many others can be changed in the
+<a href="../documentation/config_vedic.html#vchart">Vedic Chart</a> dialog.</p>
+<p>Several calculation options (e.g. Hora, Drekkana mode, friends, Varga
+signification) can be configure in the
+<a href="../documentation/config_vedic.html#vcalc">Vedic Calculation</a> dialog.</p>
+<h3>Shortcuts</h3>
+<p>Keyboard</p>
+<p>Each Varga chart has its own keyboard shortcut for startup (e.g.  Rasi=1), see the <a href="../documentation/shortcuts.html">Shortcuts</a> page.</p>
+<ul>
+<li>Escape or Ctrl+W: close chart</li>
+<li>↑ and ↓ (arrows): change the skin of the chart</li>
+<li>→ and ← (arrows): toggle North/South/East indian style of the chart</li>
+</ul>
+<p>Mouse actions</p>
+<ul>
+<li>Mouse over: highlight current Rasi</li>
+<li>Wheel: change skin</li>
+<li>Shift mouse over: show aspects from the current Rasi</li>
+<li>Ctrl mouse over: show aspects aspecting the current Rasi</li>
+<li>Alt: show all aspects</li>
+</ul>
+<h3>Context Menu</h3>
+<p>Several style options can be changed with the context menu (Mouse button
+2). These changes take only effect on the current chart. Permanent
+changes can be made in the config dialog.</p>
+<h3>Display of Planets</h3>
+<p>Planets and other objects can be show either as symbol or with their
+name. This can be configured in the <a href="../documentation/config_ui.html#planets">Planets and Signs</a>
+dialog.</p>
+<h3>Aspects</h3>
+<p>Aspects can be shown with the shortcuts described above. Aspect types
+are either Graha or Rasi drishti. See the <a href="../astrology/drishti.html">Drishtis (Aspects)</a> page for
+more information.</p>
+<p>Fields under the mouse pointer can be zoomed or highlighted, this can be
+changed in the config dialog.</p>
+<h3>Other Display Options</h3>
+<p>Several options are available.</p>
+<ul>
+<li>Astrological objects object selection, see <a href="../astrology/objects.html">Astrological Objects</a>
+</li>
+<li>Display of Arudha Padas. See <a href="../astrology/jaimini.html">Jaimini Astrology</a>
+</li>
+<li>Display of retrograde motion (R) can be toggled</li>
+<li>The Varga name, division and basic signifcation can be shown in the
+center of the chart.</li>
+<li>Default colors can be changed in the
+<a href="../documentation/config_ui.html#colors">Colors</a> dialog.</li>
+<li>Fonts can be changed in the <a href="../documentation/config_ui.html#fonts">Fonts</a> dialog.</li>
+</ul>
+<h2><a id="varga"></a>Varga View</h2>
+<p>This view contains the aggregated information about the Vargas of a
+radix horoscope.</p>
+<p>See the <a href="../astrology/vargas.html">Vargas (Divisions)</a> section.</p>
+<h2><a id="sbc"></a>Sarvatobhadra View</h2>
+<p>Sarvatobhadra is a Nakshatra based technique of ancient Vedic astrology.
+Astrological information can be found on the <a href="../astrology/sbc.html">Sarvatobhadra</a> page in the
+articles section.</p>
+<p>Semantic of SBC is similar to Varga chart (replace Rasi by Nakshatra)
+and therefore the view works similar.</p>
+<h3>Shortcuts</h3>
+<p>Keyboard</p>
+<ul>
+<li>S: open a new SBC chart for the current horoscope</li>
+<li>Escape: close chart</li>
+<li>↑ and ↓ (arrows): change the skin of the chart</li>
+</ul>
+<p>Mouse actions</p>
+<ul>
+<li>Mouse over: highlight current Nakshatra</li>
+<li>Wheel: change skin</li>
+<li>Click button 1: toggle markup of field under the mouse pointer</li>
+<li>Shift mouse over: show Vedhas from the current Nakshatra</li>
+<li>Ctrl mouse over: show Vedhas aspecting the current Nakshatra</li>
+<li>Alt: show all Vedhas</li>
+</ul>
+<p>The display options are similar to the default Vedic chart view, see
+above.</p>
+<h3>Additional Options for SBC</h3>
+<p>Special fields are marked in yellow. Birth Nakshatra, Rasi of Lagna and
+weekday of birth are marked by default. Markup can be toggled with mouse
+click.</p>
+<p>Vedhas can be shown similar to aspects in Vedic Varga charts. Benefic
+(B) and malefic (M) property of Nakshatras (depend on the Moon) can be
+toggled in the the <a href="../documentation/config_vedic.html#vchart">Vedic Chart</a> dialog.</p>
+<h2><a id="dasa"></a>Dasa Views</h2>
+<p>Dasas are the most important tool for timing of events in Vedic
+astrology. Astrological details can be found on the <a href="../astrology/dasas.html">Nakshatra Dasas</a>
+resp. <a href="../astrology/kalachakra.html">Kalachakra Dasa</a> pages.</p>
+<h3>Supported Dasas</h3>
+<p>The Dasas are divided into three groups.</p>
+<h4>First Group: Standard Dasas</h4>
+<p>The Standard Dasas are</p>
+<ul>
+<li>Vimsottari Dasa: most important Dasa of Vedic astrology. This Dasa
+should be taken into account for all chart predictions.</li>
+<li>Yogini Dasa: frequently used in North India.</li>
+<li>Kalachakra Dasa: according to Parasara the second Dasa of major
+importance (besides Vimsottari).</li>
+</ul>
+<p>The calculation of Vimsottari and Yogini Dasa follows the well known
+rules.</p>
+<p>There are several configuration options for Kalachakra Dasa, see the
+sections <a href="../astrology/kalachakra.html">Kalachakra Dasa</a> and <a href="../documentation/config_vedic.html#vcalc">Vedic Calculation</a>.</p>
+<h4>Second Group: Conditional Dasas</h4>
+<p>These Dasas are described by Parasara. Conditional Dasas only apply to
+certain charts.</p>
+<p>The Dasas are</p>
+<ol>
+<li>Ashtottari Dasa</li>
+<li>Shodshottari Dasa</li>
+<li>Dvadashottari Dasa</li>
+<li>Panchottari Dasa</li>
+<li>Shatabdika Dasa</li>
+<li>Chaturashiti Sama Dasa</li>
+<li>Dvisaptati Sama Dasa</li>
+<li>Shat Trimshat Sama Dasa</li>
+</ol>
+<h4>Third Group: Special Dasas</h4>
+<p>The 3rd group contains Lagna Vimsottari Dasa: it is like Vimsottari, but
+based upon the position of the Ascendant instead of the Moon.</p>
+<p><strong>Remark:</strong> Lagna Vimsottari calculation is always done according to the
+length method.</p>
+<h3>Calculation Options</h3>
+<p>Nakshatra Dasa can be calculated in 2 different modes</p>
+<ul>
+<li>Length method: the Nakshatra portion is calculated according to the
+length of the Moon.</li>
+<li>Time method: the portion is calculated according to the entry time
+of the Moon.</li>
+</ul>
+<p>This behaviour can be configured in the
+<a href="../documentation/config_vedic.html#vcalc">Vedic Calculation</a> tab of the configuration dialog.</p>
+<h3>View Types</h3>
+<h4>First Type: Tree</h4>
+<p>There a two types of Dasa tree views</p>
+<ol>
+<li>Tree only, shortcut &quot;D&quot;</li>
+<li>Tree with text view (&quot;Ctrl+D&quot;). The text view contains the
+corresponding slokas from the classic scriptures, e.g. Parasara Hora
+Shastra or Jataka Parijata.</li>
+</ol>
+<p>In tree views each Dasa has a root item which can be expanded up to
+arbitrary levels. So you can see Dasas, Antardasas (Bhuktis),
+Pratyantardasas, Sookshmantardasas, Pranadasas, etc. in a single view.</p>
+<p><strong>Entry Chart Action:</strong> The entry chart button is activated if a Dasa is
+selected in the tree view. You may click the button to create a new
+chart based upon the underlying entry time.</p>
+<h4>Second Type: Graphical</h4>
+<p>The graphical Dasa view appeared for the first time in release 4.0.</p>
+<blockquote>
+<h4>Shortcuts</h4>
+<p>Supported mouse actions are</p>
+<ul>
+<li>Mouse wheel: scroll contents</li>
+<li>Shift + mouse wheel: toggle Antardasa mode, i.e. show Dasa, Antardasa, Pratyantardasa etc.</li>
+<li>Ctrl + mouse wheel: change zoom</li>
+</ul>
+</blockquote>
+<p>Goal of the window is to get a simultaneous view of multiple Dasas at
+the same time. This view may help to see the synchronized effects of
+multiple Dasas.</p>
+<p><strong>Remark:</strong> default colors are implemented according to <em>Jataka
+Parijata</em> II 21/23. They can be changed in the
+<a href="../documentation/config_ui.html#colors">Colors</a> Panel.</p>
+<h4>Third Type: Text</h4>
+<p>These view types give a text based representation of Dasas. The Dasa
+type (Vimsottari etc.) can be chosen in the choice box of the toolbar.</p>
+<p>There are three kinds of text output</p>
+<ol>
+<li>Short: one line per Mahadasa, Anatadasas are shown in one line.</li>
+<li>Compact: all Dasas in a single table. Current Pratyantardasas are
+shown in the last column.</li>
+<li>Long: Each Antardasa is shown in a separate table.</li>
+</ol>
+<h2><a id="yoga"></a>Yoga View</h2>
+<p>Yogas are combinations of astrological objects, the name is frequently
+used in Vedic astrology. There are simple Yogas (e.g. position of
+Ascendant in a sign) and quite complex ones dealing with many objects
+and restrictive conditions.</p>
+<h3>Special Types of Yogas</h3>
+<p>Some hints for interpreting Yogas:</p>
+<p><strong>Nabahasa Yogas</strong> are quite important. Each chart has a ruling Nabhasa
+Yoga determining the conditions of the person's life. The ruling Yoga is
+always the most complex one (if more than one Yoga matches).</p>
+<p>Example: someone has all planets in houses 7, 8, 9 and 10, Sakti Yoga
+(all planets in 4 continous houses from th 7th) matches as well as
+Kedara (all planets in 4 signs). The ruling Yoga is Sakti.</p>
+<p><strong>Lunar Yogas:</strong> the Moon is the most important ruler of the mind. So
+Lunar Yogas give the hint for general mental disposition of the person.</p>
+<p><strong>Mixed results</strong> mostly show their effect during the corresponding
+Dasas. So Yogas have a static view on the person's life; Dasas can tell
+us the time of the events.</p>
+<h3>Using the Yoga View</h3>
+<p>Attributes of Yogas are</p>
+<ul>
+<li>Group: either based upon the astrolocical condition type (e.g. house
+position) or the name given in classical scriptures (e.g. Nabhasa
+Yogas).</li>
+<li>Description: describes the astrological matching condition.</li>
+<li>Effect: hint for the interpretation of the Yoga.</li>
+<li>Source: scripture or person judging about the effect.</li>
+</ul>
+<p>Varga Choice: determines which Varga chart to use for evaluation of the
+matching condition. Effects apply to that chart (e.g. Saptamamsa to
+children).</p>
+<p>Nakshatra based Yogas can only match in Rasi chart.</p>
+<h3>Yoga Editor</h3>
+<p>This tool can be used for manual editing of Yoga conditions and
+interpretations.</p>
+<h2><a id="av"></a>Ashtakavarga View</h2>
+<p>See the <a href="../astrology/ashtakavarga.html">Ashtakavarga</a> section.</p>
+<h2><a id="shadbala"></a>Shadbala View</h2>
+<p>See the <a href="../astrology/shadbala.html">Shadbala</a> section.</p>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../documentation/generalviews.html">← General Views</a><a class="button is-small" href="../documentation/views.html">↑ Views</a><a class="button is-small" href="../documentation/westernviews.html">Western Views →</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2022-12-15.
+			</div>
+		</footer>
+	</body>
+</html>
+

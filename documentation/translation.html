@@ -1,0 +1,276 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: Translation</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../translation.html">Translation</a></li>
+		<li><a href="../miscellaneous.html">Miscellaneous</a></li>
+		<li><a href="../documentation.html">Documentation</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/basics.html">Basics</a>
+		</li>
+		<li><a  href="../documentation/views.html">Views</a>
+		</li>
+		<li><a  href="../documentation/config.html">Configuration</a>
+		</li>
+		<li><a  href="../documentation/miscellaneous.html">Miscellaneous</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/atlas_database.html">Atlas Database</a>
+		</li>
+		<li><a  href="../documentation/print.html">Printing Charts</a>
+		</li>
+		<li><a class ='is-active' href="../documentation/translation.html">Translation</a>
+		</li>
+		<li><a  href="../documentation/git.html">Git Repository</a>
+		</li>
+		<li><a  href="../documentation/cli.html">Command Line Interface</a>
+		</li>
+		<li><a  href="../documentation/directories.html">Directory Layout</a>
+		</li>
+		<li><a  href="../documentation/charset.html">Character Sets</a>
+		</li>
+		<li><a  href="../documentation/font.html">Symbol Font</a>
+		</li>
+	</ul>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>Translation</h1>
+<p>Available Translations are</p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>English</td>
+<td>en</td>
+<td>default language</td>
+</tr>
+<tr>
+<td>French</td>
+<td>fr</td>
+<td></td>
+</tr>
+<tr>
+<td>German</td>
+<td>de</td>
+<td></td>
+</tr>
+<tr>
+<td>Hungarian</td>
+<td>hu</td>
+<td></td>
+</tr>
+<tr>
+<td>Italian</td>
+<td>it</td>
+<td></td>
+</tr>
+<tr>
+<td>Polish</td>
+<td>pl</td>
+<td></td>
+</tr>
+<tr>
+<td>Romanian</td>
+<td>ro</td>
+<td></td>
+</tr>
+<tr>
+<td>Russian</td>
+<td>ru</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish</td>
+<td>es</td>
+<td></td>
+</tr>
+<tr>
+<td>Tamil</td>
+<td>ta</td>
+<td>not complete</td>
+</tr>
+<tr>
+<td>Telugu</td>
+<td>te</td>
+<td>update required</td>
+</tr>
+<tr>
+<td>Singalese</td>
+<td>si</td>
+<td>Only chart graphics</td>
+</tr>
+</tbody>
+</table>
+<h2>Language Setup</h2>
+<p>Windows: Open the configuration dialog/tab general. Chose the language
+from the choice box. Restart the program.</p>
+<p>Linux/OS x, BSD: you must configure the environment variable <em>LANG</em>.
+The required command on the (Bash-) shell looks like</p>
+<pre><code>export LANG = de_DE.UTF-8
+</code></pre>
+<p>Examples for supported languages are</p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>LANG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>English (default)</td>
+<td>en_US.UTF-8</td>
+</tr>
+<tr>
+<td>German</td>
+<td>de_DE.UTF-8</td>
+</tr>
+<tr>
+<td>Polish</td>
+<td>pl_PL.UTF-8</td>
+</tr>
+<tr>
+<td>Russian</td>
+<td>ru_RU.UTF-8</td>
+</tr>
+<tr>
+<td>Telugu</td>
+<td>te_IN.UTF-8</td>
+</tr>
+</tbody>
+</table>
+<p>Please restart the application after changing the language.</p>
+<h2>How to Translate the Program</h2>
+<p>Translation of the program is done with GNU gettext. There are free
+translation tools that make translation easy.</p>
+<h3>First Steps</h3>
+<p>Find out the correct language code (iso code) of your language. There is
+a 2 letter short code for almost every language, e.g. <em>de</em> for German
+language, etc. A list of these codes can be found in the <a href="http://www.gnu.org/software/gettext/manual/html_chapter/gettext_15.html">Gettext
+Documentation</a>.</p>
+<h3>Getting the PO File</h3>
+<p>The required PO file is</p>
+<ul>
+<li>maitreya[version].pot: if you want to create a new translation</li>
+<li>[lang].po: if you want to modify a translation that already exists</li>
+</ul>
+<p>The PO file is part of the source code release. e.g. the file
+maitreya[version].zip that can be downloaded from the source code
+distribution. It can be found in the directory &quot;po&quot;.</p>
+<p>It can also be downloaded from the Github source code repository. The
+root URL of the repository is
+<a href="http://github.com/martin-pe/maitreya8/tree/master/po">http://github.com/martin-pe/maitreya8/tree/master/po</a>.</p>
+<h3>Configuration on Windows Systems</h3>
+<p>Quit the program if it is running.</p>
+<p>Open the configuration file which is located in in the configuration
+directory, see the <a href="../documentation/directories.html">Directory Layout</a> chapter. Find the key
+<em>General/langList</em>. Add the code of your language with space separation.</p>
+<p>Start the program and open the configuration dialog. Your language
+should be visible in the language list.</p>
+<p>Make a new directory named like the code of your language in the
+program's folder, e.g.
+<em>c:Program FilesMaitreyaLANG</em>.</p>
+<p>Copy the file <em>maitreya8.pot</em> to that directory an rename it to
+<em>LANG.po</em>.</p>
+<h3>Configuration on Linux/Unix Systems</h3>
+<p>Go to the <em>po</em> directory of the source code tree. Edit the file
+<em>LINGUAS</em> and add the code of your language. Copy the file maitreya8.pot
+to lang.po. Go to the root or the source tree and type</p>
+<p><em>automake &amp;&amp; autoconf &amp;&amp; configure &amp;&amp; make</em></p>
+<p>The compiler will complain about missing header entries. Add these
+entries and try again.</p>
+<p><strong>Note:</strong> if you want to test your translation from the source code
+tree: create a directory named like the language code in the gui
+directory. Go into that directory and link the gmo file to
+<em>maitreya8.mo</em>, e.g.
+ln -s ../../po/lang.gmo maitreya8.mo.</p>
+<h3>Write the Translation</h3>
+<p>Get a po file editor like <a href="http://poedit.sourceforge.net">poEdit</a> or
+KBabel (available as package on most Linux/Unix systems).</p>
+<p>Open the LANG.po file and translate the messages. There about 1000
+messages. Compile the message catalogue to <em>lang/maitreya8.mo</em> (Windows)
+or lang.gmo (Linux/Unix) and test your translation.</p>
+<p>You are encouraged to publish your translation for the benefit of the
+community.</p>
+<p><strong>Note</strong>: Non European languages should use a Unicode character set
+(UTF-8).</p>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../documentation/print.html">← Printing Charts</a><a class="button is-small" href="../documentation/miscellaneous.html">↑ Miscellaneous</a><a class="button is-small" href="../documentation/git.html">Git Repository →</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2022-12-16.
+			</div>
+		</footer>
+	</body>
+</html>
+

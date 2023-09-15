@@ -1,0 +1,167 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: Getting Started</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link">Related</a>
+
+				<div class="navbar-dropdown is-right"> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation/installation.html">Installation</a> <a class="navbar-item" href="../documentation/config.html">Configuration</a>				</div> <!-- navbar-dropdown -->
+			</div> <!-- navbar-item -->
+		</div> <!-- navbar-end -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../gettingstarted.html">Getting Started</a></li>
+		<li><a href="../basics.html">Basics</a></li>
+		<li><a href="../documentation.html">Documentation</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/basics.html">Basics</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/license.html">License</a>
+		</li>
+		<li><a  href="../documentation/release_notes.html">Release Notes</a>
+		</li>
+		<li><a  href="../documentation/installation.html">Installation</a>
+		</li>
+		<li><a class ='is-active' href="../documentation/gettingstarted.html">Getting Started</a>
+		</li>
+		<li><a  href="../documentation/shortcuts.html">Shortcuts</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../documentation/views.html">Views</a>
+		</li>
+		<li><a  href="../documentation/config.html">Configuration</a>
+		</li>
+		<li><a  href="../documentation/miscellaneous.html">Miscellaneous</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>Getting Started</h1>
+<h2>The First Chart</h2>
+<p>On startup two windows will open, a main window with menu and icon list
+and a chart window with a table of planetary positions.</p>
+<ul>
+<li>The menu command <strong>Document → Edit Chart Data</strong> will open a dialog
+window where you can edit the chart's data. Click <strong>OK</strong> to close
+the dialog and calculate positions according to the new data.</li>
+<li>Right click into the chart window will open a context menu. Here you
+can change the view type: Vedic/western</li>
+<li>The menu commands in the <strong>Vedic</strong> menu will open subwindows for
+Vedic charts</li>
+<li>Same for the commands in the <strong>Western</strong> menu for western astrology</li>
+<li>The chart will be saved with the command <strong>File → Save</strong>. Enter a
+suitable file name.</li>
+<li>The chart will be closed if you close the first tabular window of
+the chart.</li>
+<li>A new chart can be open with the command <strong>File → New</strong>
+</li>
+<li>Some view types do not belong to a specific chart (e.g. Ephemeris).
+Consequently some commands are not available, e.g. Dasa view.</li>
+</ul>
+<h2>Basic Configuration</h2>
+<p>The configuration is under <strong>Extras → Configuration</strong>.</p>
+<p>Minimal steps</p>
+<ol>
+<li>First tab (&quot;General&quot;): select your preferred view style: <strong>Vedic</strong>
+or <strong>Western</strong>.</li>
+<li>Go to the second tab and configure the <strong>Default Location</strong>.</li>
+</ol>
+<h2>Basic Philosophy</h2>
+<ul>
+<li>The <strong>application window</strong> contains a list of all opened windows.
+You can right click on the icons in the list to open a context menu.
+Each child window will be raised if you double click the icon. Menu
+commands only affect the active window.</li>
+<li>Each chart has a <strong>main window</strong>. All dependend child windows will
+be closed if you close the main window.</li>
+<li>Each child window has a <strong>context menu</strong> that can be opened with
+right click on the window.</li>
+<li>A new chart has the current time and default location as base data.
+You can change it with the chart data dialog (right click → Birth
+Data)</li>
+<li>You can toggle the <strong>view style</strong> (Vedic/western) of all child
+windows that support toggle.</li>
+<li>There are <strong>permanent</strong> and <strong>temporary</strong> options. Permanent options
+can be configured in the configuration dialog, temporary options can
+be switched in the context menu and will be lost after closing the
+window.</li>
+<li>
+<strong>Mouse wheel</strong> changes the style of graphical charts (MacOS X:
+shift+wheel).</li>
+<li>The <strong>chart data</strong> is stored in files. If you change the birth data,
+you will be asked if you want to save the data. Saved charts can be
+opened again later.</li>
+</ul>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../documentation/installation.html">← Installation</a><a class="button is-small" href="../documentation/basics.html">↑ Basics</a><a class="button is-small" href="../documentation/shortcuts.html">Shortcuts →</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2017-11-19.
+			</div>
+		</footer>
+	</body>
+</html>
+

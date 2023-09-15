@@ -1,0 +1,235 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: Astrological Properties</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link">Related</a>
+
+				<div class="navbar-dropdown is-right"> <a class="navbar-item" href="../documentation/config_vedic.html">Configuration: Vedic Astrology</a> <a class="navbar-item" href="../documentation/config_western.html">Configuration: Western Astrology</a>				</div> <!-- navbar-dropdown -->
+			</div> <!-- navbar-item -->
+		</div> <!-- navbar-end -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../properties.html">Astrological Properties</a></li>
+		<li><a href="../astrology.html">Astrology</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+	<ul class="menu-list">
+		<li><a  href="../astrology/objects.html">Astrological Objects</a>
+		</li>
+		<li><a class ='is-active' href="../astrology/properties.html">Astrological Properties</a>
+		</li>
+		<li><a  href="../astrology/housesystems.html">House Systems</a>
+		</li>
+		<li><a  href="../astrology/calculation.html">Calculation</a>
+		</li>
+		<li><a  href="../astrology/ayanamsa.html">Ayanamsa</a>
+		</li>
+		<li><a  href="../astrology/dignities.html">Dignities of Planets</a>
+		</li>
+		<li><a  href="../astrology/vargas.html">Vargas (Divisions)</a>
+		</li>
+		<li><a  href="../astrology/hora.html">Hora</a>
+		</li>
+		<li><a  href="../astrology/nakshatra.html">Nakshatras</a>
+		</li>
+		<li><a  href="../astrology/kpastrology.html">Krishnamurti Paddhati</a>
+		</li>
+		<li><a  href="../astrology/kalavelas.html">Upagrahas and Kala Velas</a>
+		</li>
+		<li><a  href="../astrology/drishti.html">Drishtis (Aspects)</a>
+		</li>
+		<li><a  href="../astrology/jaimini.html">Jaimini Astrology</a>
+		</li>
+		<li><a  href="../astrology/ashtakavarga.html">Ashtakavarga</a>
+		</li>
+		<li><a  href="../astrology/dasas.html">Nakshatra Dasas</a>
+		</li>
+		<li><a  href="../astrology/kalachakra.html">Kalachakra Dasa</a>
+		</li>
+		<li><a  href="../astrology/astakoota.html">Asta Koota</a>
+		</li>
+		<li><a  href="../astrology/sbc.html">Sarvatobhadra</a>
+		</li>
+		<li><a  href="../astrology/shadbala.html">Shadbala</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>Astrological Properties</h1>
+<p>Astrological objects like planets and angles have various properties
+like element, lord or Navamsa sign.</p>
+<p>These properties are shown as columns in the basic horoscope views. You
+can choose which columns to display either permanently in the
+configuration dialog or temporary in the context menus.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Vedic/Western</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Declination</td>
+<td>Both</td>
+<td>Northern or southern declination relative to the Eclipse</td>
+</tr>
+<tr>
+<td>90 Degree Longitude</td>
+<td>Western</td>
+<td>Longitude modulo 90 degrees. Used in Uranian astrology</td>
+</tr>
+<tr>
+<td>45 Degree Longitude</td>
+<td>Western</td>
+<td>Longitude modulo 45 degrees. Used in Uranian astrology</td>
+</tr>
+<tr>
+<td>Antiscia</td>
+<td>Western</td>
+<td>Longitude reflected at the Earth Meridian axis (i.e. Cancer/Capricorn). Used in Uranian astrology</td>
+</tr>
+<tr>
+<td>Sign Lord</td>
+<td>Both</td>
+<td>Planet ruling the sign. In Vedic Astrology lords are up to Saturn, in Western astrology up to Pluto.</td>
+</tr>
+<tr>
+<td>Element</td>
+<td>Both</td>
+<td>Fire, earth, air or water</td>
+</tr>
+<tr>
+<td>Sign Quality</td>
+<td>Both</td>
+<td>Movable, fixed or dual sign.</td>
+</tr>
+<tr>
+<td>Basic Signification</td>
+<td>Vedic</td>
+<td>Signification according to Parasara Hora Shastra. Can be edited in the Configuration dialog, see tab <em>Vargas</em> in <a href="../documentation/config_vedic.html#vcalc">Vedic Calculation</a>.</td>
+</tr>
+<tr>
+<td>Dignity</td>
+<td>Vedic</td>
+<td>Exaltation, debilation, Moolatrikona, friendship, see <a href="../astrology/dignities.html">Dignities of Planets</a>.</td>
+</tr>
+<tr>
+<td>Navamsa D9</td>
+<td>Vedic</td>
+<td>Navamsa sign, see <a href="../astrology/vargas.html">Vargas (Divisions)</a>.</td>
+</tr>
+<tr>
+<td>Nakshatra</td>
+<td>Vedic</td>
+<td>Position in 27 resp. 28 Nakshatra system, see <a href="../astrology/nakshatra.html">Nakshatras</a>.</td>
+</tr>
+<tr>
+<td>Nakshatra Pada</td>
+<td>Vedic</td>
+<td>quarter part (3°20) of the Nakshatra (1..4), see <a href="../astrology/nakshatra.html">Nakshatras</a>.</td>
+</tr>
+<tr>
+<td>Krishnamurti lord</td>
+<td>Vedic</td>
+<td>KP lords and sublords according to Vimsottari Dasa, see <a href="../astrology/kpastrology.html">Krishnamurti Paddhati</a>.</td>
+</tr>
+<tr>
+<td>Shastiamsa D 60</td>
+<td>Vedic</td>
+<td>Lord of the Shastiamsa, see <a href="../astrology/vargas.html">Vargas (Divisions)</a>.</td>
+</tr>
+<tr>
+<td>Dasa Varga dignities</td>
+<td>Vedic</td>
+<td>Lord of the Dasa Varga, see <a href="../astrology/vargas.html">Vargas (Divisions)</a>.</td>
+</tr>
+<tr>
+<td>Bhava/House Position</td>
+<td>Both</td>
+<td>Positions of the planets in houses/Bhava chakra (not Rasi), see <a href="../astrology/housesystems.html">House Systems</a>.</td>
+</tr>
+<tr>
+<td>Jaimini Karakas</td>
+<td>Vedic</td>
+<td>Atma Karaka, Amatya Karaka etc, see <a href="../astrology/jaimini.html">Jaimini Astrology</a>.</td>
+</tr>
+<tr>
+<td>Ashtakavarga points</td>
+<td>Vedic</td>
+<td>Points in Rekha chart, see <a href="../astrology/ashtakavarga.html">Ashtakavarga</a>.</td>
+</tr>
+</tbody>
+</table>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../astrology/objects.html">← Astrological Objects</a><a class="button is-small" href="../astrology.html">↑ Astrology</a><a class="button is-small" href="../astrology/housesystems.html">House Systems →</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2022-12-14.
+			</div>
+		</footer>
+	</body>
+</html>
+

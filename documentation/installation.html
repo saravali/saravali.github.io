@@ -1,0 +1,298 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: Installation</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link">Related</a>
+
+				<div class="navbar-dropdown is-right"> <a class="navbar-item" href="../documentation/release_notes.html">Release Notes</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation/charset.html">Character Sets</a> <a class="navbar-item" href="../documentation/font.html">Symbol Font</a> <a class="navbar-item" href="../documentation/directories.html">Directory Layout</a> <a class="navbar-item" href="../documentation/git.html">Git Repository</a> <a class="navbar-item" href="../astrology/calc_ephemfiles.html">Ephemeris Data Files</a>				</div> <!-- navbar-dropdown -->
+			</div> <!-- navbar-item -->
+		</div> <!-- navbar-end -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../installation.html">Installation</a></li>
+		<li><a href="../basics.html">Basics</a></li>
+		<li><a href="../documentation.html">Documentation</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/basics.html">Basics</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/license.html">License</a>
+		</li>
+		<li><a  href="../documentation/release_notes.html">Release Notes</a>
+		</li>
+		<li><a class ='is-active' href="../documentation/installation.html">Installation</a>
+		</li>
+		<li><a  href="../documentation/gettingstarted.html">Getting Started</a>
+		</li>
+		<li><a  href="../documentation/shortcuts.html">Shortcuts</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../documentation/views.html">Views</a>
+		</li>
+		<li><a  href="../documentation/config.html">Configuration</a>
+		</li>
+		<li><a  href="../documentation/miscellaneous.html">Miscellaneous</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>Installation</h1>
+<p>This page describes some details of the installation process and gives
+hints for trouble shooting.</p>
+<h3>Platforms</h3>
+<p>The program runs under various platforms including Windows, MacOC (Intel and Silicon),
+Linux (Ubuntu, Debian, Arch) and BSD (FreeBSD, OpenBSD).</p>
+<h2>UNIX-like Systems</h2>
+<p>The distribution is based on automake, so the traditional configure/make
+should be sufficient on most systems.</p>
+<h3>Prerequisites</h3>
+<p>You need wxWidgets including the headers. Version 3.0 is required.
+Legacy version 2.8 works until release 8.0, later versions require wx3.</p>
+<p>Example list for wx 3.0 installation on Ubuntu 20 is</p>
+<ul>
+<li>libwxbase3.0-0</li>
+<li>libwxbase3.0-dev</li>
+<li>libwxgtk3.0-gtk3-0</li>
+<li>libwxgtk3.0-gtk3-dev
+_ wx3.0-headers</li>
+<li>wx3.0-i18n</li>
+<li>libfontconfig1-dev</li>
+</ul>
+<p>The following command can be pasted to the console:</p>
+<blockquote>
+<p>sudo apt-get install libwxbase3.0-0v5 libwxbase3.0-dev libwxgtk3.0-gtk3-0 libwxgtk3.0-gtk3-dev wx3.0-headers wx3.0-i18n libfontconfig1-dev</p>
+</blockquote>
+<p>Other platforms have only 2 or 3 such packages. On Redhat/Fedora the wx
+packages are called <strong>wxGTK</strong> and <strong>wxGTK-dev</strong>.</p>
+<p>We recommend <strong>Unicode</strong> packages if your platform provides Ansi and
+Unicode versions of the software. If not mentioned, Unicode will most
+likely be the default.</p>
+<p>You can also compile wx from source code, see the <a href="http://www.wxwidgets.org">wxWidgets Site</a>.</p>
+<p>Additional dependencies are</p>
+<ul>
+<li>
+<strong>Required</strong>: a C/C++ compiler, GNU compiler including g++ (C++
+extension) wil be the default on most systems. <em>clang</em> compiler
+should work as well.</li>
+<li>Development headers of fontconfig package</li>
+<li>flex and byacc for compilation of Lex and Yacc sources (only
+required after <em>make clean</em> or for experts).</li>
+<li>aclocal, automake and autoconf (only if you want to dive deeper into
+the compilation details).</li>
+</ul>
+<h2>Configure</h2>
+<p>Default installation directory (&quot;prefix&quot;) is according to GNU
+conventions under /usr/local. Data directory would bei
+/usr/share/maitreya8, the binaries would be located at /usr/local/bin.</p>
+<p>If you want to change this, type</p>
+<pre><code class="language-shell">./configure --prefix=&lt;directory&gt;
+</code></pre>
+<p>where 'directory' could be something like '/usr' or '/opt'.</p>
+<p>If the configure script complains about a wrong automake version you can
+run the <em>autogen.sh</em> script to create the automake stuff from scratch.
+Automake and aclocal must be installed in that case.</p>
+<p>The wx-config script is essential for the platform dependent compiler
+switches. configure must find it, otherwise the program will not
+compile. wx-config is searched in various standard directories. If
+configure doesn't find your wx-config, start configure with the option</p>
+<pre><code class="language-shell">--with-wx-config=&lt;name&gt;
+</code></pre>
+<p>The resulting executable (src/gui/maitreya8.bin) will be quite big. You
+can strip if you don't want debugging informations (strip
+src/gui/maitreya8.bin).</p>
+<p>The font &quot;Saravali.ttf&quot; from the directory &quot;src/fonts&quot; must be installed
+on your system.</p>
+<p>This is done automatically by 'make install' and can be done manually as
+follows</p>
+<ul>
+<li>install the font with your system's configuration tools</li>
+<li>copy the font to the default True Type font directory (e.g.
+/usr/share/fonts/truetype).</li>
+</ul>
+<h2><a id="debian"></a>Debian Linux and Derivatives</h2>
+<p>On Debian and derivates (Ubuntu, Mint etc.) there are packages for Swiss
+Ephemeris available.</p>
+<p>The binaries and headers are available in the packages <em>libswe0</em> resp.
+<em>libswe-dev</em>.</p>
+<p>The packages can be used for compilation of Maitreya.</p>
+<pre><code class="language-shell">export LIBSWE_CFLAGS=-I/usr/include  
+export LIBSWE_LIBS=&quot;-lswe&quot;  
+./configure --with-swe=system
+</code></pre>
+<p>Data files for the swiss ephemeris are available in the packages</p>
+<ul>
+<li>swe-standard-data</li>
+<li>swe-extra-data</li>
+</ul>
+<p>The data files will be installed under /usr/share/ephe. Maitreya will
+recognize the data files on startup and set the path to the directory
+automatically.</p>
+<h2>Arch Linux</h2>
+<p>Arch Linux can build from <a href="https://aur.archlinux.org/packages/maitreya/">AUR</a>.</p>
+<h2><a id="freebsd"></a>Free BSD</h2>
+<p>wxGTK must be installed. It can be found in the section <em>x11-toolkits</em>.
+Unicode version of wxgtk 3.0 is recommended.</p>
+<p>The script wx-config is named wxgtk2u-3.0-config. The configure command
+looks like</p>
+<pre><code class="language-shell">./configure --with-wx-config=wxgtk2u-3.0-config
+</code></pre>
+<p>If configure complains about missing fontconfig installation you can set
+these environment variables and call configure again. See note below (C
+shell syntax, use <em>export</em> command for bash or ksh).</p>
+<pre><code class="language-shell">setenv FONTCONFIG_CFLAGS &quot;-I/usr/include&quot;  
+setenv FONTCONFIG_LIBS &quot;-lfontconfig&quot;  
+./configure --with-wx-config=wxgtk2u-3.0-config  
+make
+</code></pre>
+<p>If font installation with <em>make install</em> does not work you can install
+it manually instead: copy the font Saravali.ttf from the source
+directory src/fonts to /usr/local/lib/X11/fonts/TTF and restart the
+application.</p>
+<h2><a id="windows"></a>Windows Systems</h2>
+<p>Visual Studio is not supported any more.</p>
+<h3>MinGW</h3>
+<p>The compilation with MinGW is a bit more complicated.</p>
+<p><strong>First step:</strong> install MinGW. This is straight forward. Read the
+corresponding MingGW documentation.</p>
+<p><strong>Second step</strong>: Installation of wxWidgets</p>
+<p>Get the source code for wxWidgets from wxWidgets.org. You can fetch
+either the windows packages (like wx-msw) or the wxAll package. Unpack
+the source code. Documentation is under doc/msw.</p>
+<p>Go to the the root directory of the wxWidgets source code distribution.</p>
+<p>Type</p>
+<pre><code class="language-shell">./configure --disable-shared --enable-unicode  
+make  
+make install
+</code></pre>
+<p>You can also leave the option --disable-shared. You will then get a
+shared library of wxWidgets. The release will be bigger then.</p>
+<p>If everything goes well, you'll have a ready-to-use wxWidgets
+installation.</p>
+<p>You can test your installation by compiling one of the samples (e.g.
+sample minimal). Just go to the directory, type</p>
+<pre><code class="language-shell">make
+</code></pre>
+<p>and start the example.</p>
+<p><strong>Third step</strong>: Installation of Maitreya</p>
+<p>Create a directory for the source code tree, e.g. c:maitreya. Enter
+this directory.</p>
+<p>Unpack the source code archive</p>
+<pre><code class="language-shell">unzip maitreya-&lt;version&gt;.zip (zip file)  
+or  
+tar jxvf maitreya-&lt;version&gt;.tar.bz2 (bzip2 file)  
+etc.
+</code></pre>
+<p>Type</p>
+<pre><code class="language-shell">make -f Makefile.win
+</code></pre>
+<p>Hope that everything's going well.</p>
+<p>The executable (src/gui/maitreya8.exe) will be quite big. You can strip
+if you don't want debugging informations (strip src/gui/maitreya8.exe).</p>
+<h3>Command Line Interface</h3>
+<p>You can also build the command line interface, called 'textclient.exe' for
+historical reasons.</p>
+<pre><code class="language-shell">cd src/jyotish  
+make -f Makefile.win textclient.exe
+</code></pre>
+<h3>Note</h3>
+<p>You need the MinGW DLL to start the program. So you can either start the
+program from the MinGW shell or you provide the files (one or more
+mingw*.dll) on the path.</p>
+<p>These files are located in the msys or mingw directory. You can e.g.
+copy them to the place where the executable is located.
+Probably you can also copy them to the windows directory, try it.</p>
+<h1>Compilation on Mac OS X</h1>
+<p>The program compiles and runs on Mac OS X Yosemite or later. GNU gcc and
+g++ are required (install xcode command line tools)</p>
+<p>The following steps work on Mac OS X Yosemite with wxWidgets-3.0.3:
+download wxWidgets source package, unpack it. Create folder for build,
+change to folder and call configure and make</p>
+<pre><code class="language-shell">../configure --disable-shared --with-macosx-version-min=10.6  
+make
+</code></pre>
+<p>Unpack the maitreya release and call configure and make.</p>
+<pre><code class="language-shell">export CC=&quot;gcc -mmacosx-version-min=10.6&quot;  
+export CXX=&quot;g++ -mmacosx-version-min=10.6&quot;  
+./configure --with-wx-config=[path-to-wx-build]/wx-config  
+make
+</code></pre>
+<p>Calling the script &quot;create_mac_release.sh&quot; will create the release
+directory and application folder &quot;Maitreya8.app&quot; with required data. It
+can be started with the &quot;open&quot; command or with mouse click from the
+Finder.</p>
+<p>Create the disk image with</p>
+<pre><code class="language-shell">create_mac_release.sh dmg
+</code></pre>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../documentation/release_notes.html">← Release Notes</a><a class="button is-small" href="../documentation/basics.html">↑ Basics</a><a class="button is-small" href="../documentation/gettingstarted.html">Getting Started →</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2023-09-13.
+			</div>
+		</footer>
+	</body>
+</html>
+

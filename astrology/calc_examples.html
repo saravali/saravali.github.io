@@ -1,0 +1,219 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: Calculation Examples</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../calc_examples.html">Calculation Examples</a></li>
+		<li><a href="../calculation.html">Calculation</a></li>
+		<li><a href="../astrology.html">Astrology</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+	<ul class="menu-list">
+		<li><a  href="../astrology/objects.html">Astrological Objects</a>
+		</li>
+		<li><a  href="../astrology/properties.html">Astrological Properties</a>
+		</li>
+		<li><a  href="../astrology/housesystems.html">House Systems</a>
+		</li>
+		<li><a  href="../astrology/calculation.html">Calculation</a>
+	<ul class="menu-list">
+		<li><a  href="../astrology/calc_options.html">Calculation Options</a>
+		</li>
+		<li><a  href="../astrology/calc_ephemfiles.html">Ephemeris Data Files</a>
+		</li>
+		<li><a class ='is-active' href="../astrology/calc_examples.html">Calculation Examples</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../astrology/ayanamsa.html">Ayanamsa</a>
+		</li>
+		<li><a  href="../astrology/dignities.html">Dignities of Planets</a>
+		</li>
+		<li><a  href="../astrology/vargas.html">Vargas (Divisions)</a>
+		</li>
+		<li><a  href="../astrology/hora.html">Hora</a>
+		</li>
+		<li><a  href="../astrology/nakshatra.html">Nakshatras</a>
+		</li>
+		<li><a  href="../astrology/kpastrology.html">Krishnamurti Paddhati</a>
+		</li>
+		<li><a  href="../astrology/kalavelas.html">Upagrahas and Kala Velas</a>
+		</li>
+		<li><a  href="../astrology/drishti.html">Drishtis (Aspects)</a>
+		</li>
+		<li><a  href="../astrology/jaimini.html">Jaimini Astrology</a>
+		</li>
+		<li><a  href="../astrology/ashtakavarga.html">Ashtakavarga</a>
+		</li>
+		<li><a  href="../astrology/dasas.html">Nakshatra Dasas</a>
+		</li>
+		<li><a  href="../astrology/kalachakra.html">Kalachakra Dasa</a>
+		</li>
+		<li><a  href="../astrology/astakoota.html">Asta Koota</a>
+		</li>
+		<li><a  href="../astrology/sbc.html">Sarvatobhadra</a>
+		</li>
+		<li><a  href="../astrology/shadbala.html">Shadbala</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>Calculation Examples</h1>
+<p>The following examples demonstrate various ephemeris options and compare
+the results with external programs or printed ephemeris.</p>
+<p>Reference data are</p>
+<ol>
+<li>Rosicrucian Ephemeris based on JPL DE200/LE200. Has precision better
+than 1/100 second of arc. The printed data are rounded to the
+nearest second of arc.</li>
+<li>Jagannatha Hora Lite 6.0 (JHL) is based upon Swiss Ephemeris. Lite
+version only supports non topocentric coordinates and true
+positions. Configured ayanamsa is sayana (=zero)</li>
+</ol>
+<p>Calculation date is Jan 1 1900, 0:00 UT. Longitude and latitude are
+zero. The positions of the Sun, the Moon and sidereal time are
+calculated.</p>
+<p>Abbreviations</p>
+<ul>
+<li>M: Maitreya</li>
+<li>UT: universal time = greenwich mean time</li>
+<li>ET: ephemeris time (differs 3.9 sec from UT for 1900-1-1)</li>
+<li>ST: sidereal time</li>
+</ul>
+<p>The following examples configurations are calculated vs. compared with
+reference sources</p>
+<ol>
+<li>M default: Non topocentric, UT, apparent positions, with data files</li>
+<li>M non topocentric, ET, apparent positions, with data files</li>
+<li>Cross check like #2: Rosicrucian Ephemeris</li>
+<li>M non topocentric, UT, true positions, with data files</li>
+<li>M non topocentric, UT, true positions, without data files</li>
+<li>Cross check like #5: JHL Non topocentric, UT, true positions,
+without data files</li>
+<li>M topocentric, UT, apparent positions, with data files</li>
+</ol>
+<h2>Calculation Results</h2>
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Sun's position</th>
+<th>Moon's position</th>
+<th>ST</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>10 09'11.765&quot; Cp</td>
+<td>02 24'58.017&quot; Cp</td>
+<td>06:40:45</td>
+</tr>
+<tr>
+<td>2</td>
+<td>10 09'11.882&quot; Cp</td>
+<td>02 24'59.376&quot; Cp</td>
+<td>06:40:45</td>
+</tr>
+<tr>
+<td>3</td>
+<td>10 09'12&quot; Cp</td>
+<td>02 25'00&quot; Cp</td>
+<td>06:40:45</td>
+</tr>
+<tr>
+<td>4</td>
+<td>10 09'32.613&quot; Cp</td>
+<td>02 24'58.751&quot; Cp</td>
+<td>06:40:45</td>
+</tr>
+<tr>
+<td>5</td>
+<td>10 09'32.616&quot; Cp</td>
+<td>02 24'59.234&quot; Cp</td>
+<td>06:40:45</td>
+</tr>
+<tr>
+<td>6</td>
+<td>10 09'32.61&quot; Cp</td>
+<td>02 24'59.23&quot; Cp</td>
+<td>06:40:45</td>
+</tr>
+<tr>
+<td>7</td>
+<td>10 09'11.578&quot; Cp</td>
+<td>02 33'05.018&quot; Cp</td>
+<td>06:40:45</td>
+</tr>
+</tbody>
+</table>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../astrology/calc_ephemfiles.html">← Ephemeris Data Files</a><a class="button is-small" href="../astrology/calculation.html">↑ Calculation</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2015-11-09.
+			</div>
+		</footer>
+	</body>
+</html>
+

@@ -1,0 +1,161 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: Character Sets</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../charset.html">Character Sets</a></li>
+		<li><a href="../miscellaneous.html">Miscellaneous</a></li>
+		<li><a href="../documentation.html">Documentation</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/basics.html">Basics</a>
+		</li>
+		<li><a  href="../documentation/views.html">Views</a>
+		</li>
+		<li><a  href="../documentation/config.html">Configuration</a>
+		</li>
+		<li><a  href="../documentation/miscellaneous.html">Miscellaneous</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/atlas_database.html">Atlas Database</a>
+		</li>
+		<li><a  href="../documentation/print.html">Printing Charts</a>
+		</li>
+		<li><a  href="../documentation/translation.html">Translation</a>
+		</li>
+		<li><a  href="../documentation/git.html">Git Repository</a>
+		</li>
+		<li><a  href="../documentation/cli.html">Command Line Interface</a>
+		</li>
+		<li><a  href="../documentation/directories.html">Directory Layout</a>
+		</li>
+		<li><a class ='is-active' href="../documentation/charset.html">Character Sets</a>
+		</li>
+		<li><a  href="../documentation/font.html">Symbol Font</a>
+		</li>
+	</ul>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>Character Sets</h1>
+<p>This chapter describes the pitfalls of language depending character
+sets.</p>
+<p>Maitreya supports Unicode character sets since release 4.0. Old version
+have Ansi charsets. This code page change may lead to several problems.</p>
+<h2><a id="charset_problems"></a>Charset Problems in Location Database, etc.</h2>
+<p>You may see broken characters in the location database if you copy your
+old file &quot;locations.dat&quot; to the the directory of the Unicode release.</p>
+<p>Older versions of the location database had Ansi format; the new
+database has Unicode format. Solution: open the database file
+&quot;locations.dat&quot; in a Unicode capable editor (like Word on Windows or
+gedit on Linux). Save the file in Unicode UTF-8 format. The problem
+should disappear then.</p>
+<p>Same for astrological data files &quot;*.mtx&quot; etc.</p>
+<h2><a id="unicode_win"></a>Unicode Charsets on Windows Platforms</h2>
+<p>Unicode character sets are especially required for non European (e.g.
+Telugu) translation and display of Sanskrit characters in Sarvatobhadra
+view.</p>
+<p>Problems in Unicode charset display can be a result of Windows
+configuration.</p>
+<p>On Windows XP, additional support for Unicode languages can be installed
+as follows:
+Start →Settings → Control Panel → Regional Options and Language Options.</p>
+<p>In the Languages tab, check the Supplemental language support option(s)
+you want. Setting both options will install all optional fonts. This
+option adds fonts as well as system support for those languages.</p>
+<p>Installation on Windows 2000 is similar.</p>
+<h2><a id="unicode9x"></a>Unicode on Windows 9x</h2>
+<p>On Windows 95 and 98 the compilation must done with <em>libunicows</em> (a
+Unicode library for Windows).</p>
+<h2><a id="charset_linux"></a>Setting up the Correct Language on Linux/BSD Systems</h2>
+<p>Language configuration on Linux/BSD is done with the environment
+variable <em>LANG</em>. This variable holds the ISO code of the desired
+language and country plus extra information about the character set.</p>
+<p><strong>Example</strong></p>
+<ul>
+<li>
+<em>en</em> - means English language.</li>
+<li>
+<em>en_US</em> - means US American English language.</li>
+<li>
+<em>en_US.UTF-8</em> - means US American language with utf-8 Unicode
+character set.</li>
+</ul>
+<p>Most systems have the correct configuration by default because
+installation programs generally setup the correct language.</p>
+<p>If not, try to set the language manually:
+export LANG=te for Bource Again Shell or setenv LANG te for csh.
+Or try export LANG=te_IN (may work on some systems like Fedora 5).</p>
+<p>Russian language should be configured with export LANG=ru_RU, German
+lang with de_DE, etc.</p>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../documentation/directories.html">← Directory Layout</a><a class="button is-small" href="../documentation/miscellaneous.html">↑ Miscellaneous</a><a class="button is-small" href="../documentation/font.html">Symbol Font →</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2022-12-27.
+			</div>
+		</footer>
+	</body>
+</html>
+

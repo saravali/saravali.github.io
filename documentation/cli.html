@@ -1,0 +1,483 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: Command Line Interface</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link">Related</a>
+
+				<div class="navbar-dropdown is-right"> <a class="navbar-item" href="../documentation/installation.html">Installation</a>				</div> <!-- navbar-dropdown -->
+			</div> <!-- navbar-item -->
+		</div> <!-- navbar-end -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../cli.html">Command Line Interface</a></li>
+		<li><a href="../miscellaneous.html">Miscellaneous</a></li>
+		<li><a href="../documentation.html">Documentation</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/basics.html">Basics</a>
+		</li>
+		<li><a  href="../documentation/views.html">Views</a>
+		</li>
+		<li><a  href="../documentation/config.html">Configuration</a>
+		</li>
+		<li><a  href="../documentation/miscellaneous.html">Miscellaneous</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/atlas_database.html">Atlas Database</a>
+		</li>
+		<li><a  href="../documentation/print.html">Printing Charts</a>
+		</li>
+		<li><a  href="../documentation/translation.html">Translation</a>
+		</li>
+		<li><a  href="../documentation/git.html">Git Repository</a>
+		</li>
+		<li><a class ='is-active' href="../documentation/cli.html">Command Line Interface</a>
+		</li>
+		<li><a  href="../documentation/directories.html">Directory Layout</a>
+		</li>
+		<li><a  href="../documentation/charset.html">Character Sets</a>
+		</li>
+		<li><a  href="../documentation/font.html">Symbol Font</a>
+		</li>
+	</ul>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>Command Line Interface</h1>
+<p>The command line interface (cli) is an addon for text oriented extraction of astrological output.</p>
+<p>The cli can be used</p>
+<ul>
+<li>under Linux/BSD: use the executable <em>maitreya8t</em> included in the binary package or from the source folder &quot;src/jyotish&quot;</li>
+<li>OS x: build the cli from source, see above</li>
+<li>Windows: build it from source, see installation on <a href="../documentation/installation.html#windows">Windows Systems</a>
+</li>
+</ul>
+<p>There is a help text showing all the parameters when the cli is excuted without command line parameters
+(or the option &quot;--help').</p>
+<h2>Setting Date, Time and Location</h2>
+<p>Date and location can be set by the command line parameters, either by the &quot;date&quot;
+and &quot;location&quot; switches or by using a file storing the parameters (mtx file
+stored saved by the gui application).</p>
+<table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--date=[string]</td>
+<td>Set UT date YYYY-MM-DD HH:MM:SS</td>
+</tr>
+<tr>
+<td>--ldate=[string]</td>
+<td>Set local date YYYY-MM-DD HH:MM:SS</td>
+</tr>
+<tr>
+<td>--location=[string]</td>
+<td>Set location &quot;name LL:LL[:LL] BB:BB[:BB] (+/-)TZ&quot;</td>
+</tr>
+<tr>
+<td>--file=[string]</td>
+<td>Open given file and use data for calculation</td>
+</tr>
+</tbody>
+</table>
+<p>If the date is not explicitly set, current system date is used. Location is set to
+zero if not set by cli parameters.</p>
+<h3>Location</h3>
+<p>The location parameter can contain four elements, each separated by a space. The whole
+group must be enclosed by quotation marks.</p>
+<ul>
+<li>Location name <em>without</em> spaces</li>
+<li>Longitude in deg:min:sec for eastern hemisphere. Use negative numbers for western hemisphere. Minutes and seconds can be omitted.</li>
+<li>Latitude in deg:min:sec for northern hemisphere. Use negative numbers for southern hemisphere.</li>
+<li>Time zone in hours. Western hemisphere should use negative numbers.</li>
+</ul>
+<h4>Examples</h4>
+<p>Calculate planets for New Dehli/India and a given local date</p>
+<pre><code>maitreya8t -ldate=&quot;1978-12-1 13:20&quot; --location=&quot;NewDehli 43:12:27 22:54:10	5.5&quot; --vedicplanets
+</code></pre>
+<p>Calculate planets in western style for Rio de Janeiro and current date.</p>
+<pre><code>maitreya8t --location &quot;RioDeJaneiro -43:12:27 -22:54:10	-2&quot; --westernplanets
+</code></pre>
+<h3>Secondary Date Parameters</h3>
+<p>These parameters apply in several use cases</p>
+<ul>
+<li>Ephemeris (year and month)</li>
+<li>Transits (event date)</li>
+<li>Hora</li>
+<li>eclipse calculation (Start date of time span)</li>
+</ul>
+<p>They can be set explicitly for year/month/day.</p>
+<table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--year=[integer]</td>
+<td>set additional year (transit, Solar)</td>
+</tr>
+<tr>
+<td>--month=[integer]</td>
+<td>set additional month (transit)</td>
+</tr>
+<tr>
+<td>--day=[integer]</td>
+<td>set additional day (transit)</td>
+</tr>
+</tbody>
+</table>
+<p>Day and month count start from one, so January is &quot;1&quot; etc.</p>
+<p>Default values are taken from the current system date.</p>
+<h4>Example</h4>
+<p>Print Ephemeris for March 1963</p>
+<pre><code> maitreya8t --year=1963 --month=3 --ephemeris
+</code></pre>
+<h2>Output Style</h2>
+<p>Western and Vedic style can be explicitly set. Default will be the preconfigured style.</p>
+<table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--vedic</td>
+<td>Force Vedic mode (instead of default)</td>
+</tr>
+<tr>
+<td>--western</td>
+<td>Force western mode (instead of default)</td>
+</tr>
+</tbody>
+</table>
+<h3>Example</h3>
+<p>Print ingress events for current month according to Vedic astrology</p>
+<pre><code> maitreya8t --vedic --ephemeris-ingress
+</code></pre>
+<h3>Output Format</h3>
+<p>Default output format is plain text. It can be overwritten by the following switches.</p>
+<table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--html</td>
+<td>Maitreya formatted HTML format (like in GUI application)</td>
+</tr>
+<tr>
+<td>--plain-html</td>
+<td>plain HTML</td>
+</tr>
+<tr>
+<td>--csv</td>
+<td>csv, can be used for spreadsheet import of tables</td>
+</tr>
+</tbody>
+</table>
+<h2>Basic Output and General Astrology</h2>
+<table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--base-data</td>
+<td>Show base data of chart</td>
+</tr>
+<tr>
+<td>--astronomical</td>
+<td>Show astronomical data</td>
+</tr>
+<tr>
+<td>--arabic</td>
+<td>Show Arabic parts</td>
+</tr>
+<tr>
+<td>--planet-list</td>
+<td>List planets (like in main window, using switch for Vedic/western)</td>
+</tr>
+<tr>
+<td>--solar</td>
+<td>Show Solar chart</td>
+</tr>
+</tbody>
+</table>
+<h2>Vedic Astrology</h2>
+<p>There are several switches for Vedic astrology. The output is identical to the
+correspoding text widgets of the GUI application,</p>
+<table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--vedicplanets</td>
+<td>Show vedic planets (like in TextView)</td>
+</tr>
+<tr>
+<td>--kp</td>
+<td>Show Krishnamurti Paddhati</td>
+</tr>
+<tr>
+<td>--bhavas</td>
+<td>Show Bhavas</td>
+</tr>
+<tr>
+<td>--nakshatras</td>
+<td>Show Nakshatras</td>
+</tr>
+<tr>
+<td>--vargas</td>
+<td>Show Vargas</td>
+</tr>
+<tr>
+<td>--ashtakavarga</td>
+<td>Show Ashtakavarga</td>
+</tr>
+<tr>
+<td>--yogas</td>
+<td>Show Yogas</td>
+</tr>
+<tr>
+<td>--jaimini</td>
+<td>Show Jaimini calculation</td>
+</tr>
+<tr>
+<td>--shadbala</td>
+<td>Show Shadbala</td>
+</tr>
+<tr>
+<td>--dasas=[integer]</td>
+<td>Show Dasa nb #n (short form)</td>
+</tr>
+<tr>
+<td>--dasas-compact=[integer]</td>
+<td>Show Dasa nb #n (compact form)</td>
+</tr>
+<tr>
+<td>--dasas-long=[integer]</td>
+<td>Show Dasa nb #n (short form)</td>
+</tr>
+<tr>
+<td>--shadbala</td>
+<td>Show Shadbala</td>
+</tr>
+<tr>
+<td>--hora</td>
+<td>Show Hora</td>
+</tr>
+</tbody>
+</table>
+<h2>Western Astrology</h2>
+<p>Similar to the Vedic astrology switches.</p>
+<table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--westernplanets</td>
+<td>Show western planets (like in TextView)</td>
+</tr>
+<tr>
+<td>--aspects</td>
+<td>Show aspects</td>
+</tr>
+<tr>
+<td>--uranian</td>
+<td>Show Uranian Analysis</td>
+</tr>
+<tr>
+<td>--uranian-yearlypreview</td>
+<td>Show yearly preview (Uranian astrology)</td>
+</tr>
+</tbody>
+</table>
+<h2>Transits</h2>
+<p>Transit date can be set with the year/month/day switches described above.</p>
+<table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--transits</td>
+<td>Show transits</td>
+</tr>
+<tr>
+<td>--solar-arc</td>
+<td>Show Solar arc</td>
+</tr>
+<tr>
+<td>--directions</td>
+<td>Show directions</td>
+</tr>
+<tr>
+<td>--lunar-arc</td>
+<td>Show Lunar arc</td>
+</tr>
+<tr>
+<td>--constant-arc</td>
+<td>Show constant arc</td>
+</tr>
+</tbody>
+</table>
+<h2>Ephemeris and Eclipses</h2>
+<table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--ephemeris</td>
+<td>Show ephemeris</td>
+</tr>
+<tr>
+<td>--ephemeris-sunrise</td>
+<td>Show ephemeris sunrise/Tithi</td>
+</tr>
+<tr>
+<td>--ephemeris-ingress</td>
+<td>Show ephemeris ingress events</td>
+</tr>
+<tr>
+<td>--ephemeris-lunar</td>
+<td>Show ephemeris Lunar events</td>
+</tr>
+<tr>
+<td>--ephemeris-kpevents=[string]</td>
+<td>Show ephemeris kp events for Dasa #n</td>
+</tr>
+<tr>
+<td>--eclipses</td>
+<td>Show eclipses</td>
+</tr>
+</tbody>
+</table>
+<h4>Example</h4>
+<p>Print siderial time, sunrise, sunset and Tithi for September 2010	(Ephemeris view, third tab)</p>
+<pre><code> maitreya8t --year=2010 --month=9 --ephemeris-sunrise
+</code></pre>
+<h2>Partner Astrology</h2>
+<table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--file2=[string]</td>
+<td>Open second file for partner chart</td>
+</tr>
+<tr>
+<td>--partner-vedic</td>
+<td>Show Vedic partner analysis</td>
+</tr>
+<tr>
+<td>--partner-composite</td>
+<td>Show partner composite chart</td>
+</tr>
+</tbody>
+</table>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../documentation/git.html">← Git Repository</a><a class="button is-small" href="../documentation/miscellaneous.html">↑ Miscellaneous</a><a class="button is-small" href="../documentation/directories.html">Directory Layout →</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2022-12-16.
+			</div>
+		</footer>
+	</body>
+</html>
+

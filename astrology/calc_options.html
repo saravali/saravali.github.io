@@ -1,0 +1,168 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: Calculation Options</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link">Related</a>
+
+				<div class="navbar-dropdown is-right"> <a class="navbar-item" href="../documentation/config_general.html">General Configuration</a>				</div> <!-- navbar-dropdown -->
+			</div> <!-- navbar-item -->
+		</div> <!-- navbar-end -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../calc_options.html">Calculation Options</a></li>
+		<li><a href="../calculation.html">Calculation</a></li>
+		<li><a href="../astrology.html">Astrology</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+	<ul class="menu-list">
+		<li><a  href="../astrology/objects.html">Astrological Objects</a>
+		</li>
+		<li><a  href="../astrology/properties.html">Astrological Properties</a>
+		</li>
+		<li><a  href="../astrology/housesystems.html">House Systems</a>
+		</li>
+		<li><a  href="../astrology/calculation.html">Calculation</a>
+	<ul class="menu-list">
+		<li><a class ='is-active' href="../astrology/calc_options.html">Calculation Options</a>
+		</li>
+		<li><a  href="../astrology/calc_ephemfiles.html">Ephemeris Data Files</a>
+		</li>
+		<li><a  href="../astrology/calc_examples.html">Calculation Examples</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../astrology/ayanamsa.html">Ayanamsa</a>
+		</li>
+		<li><a  href="../astrology/dignities.html">Dignities of Planets</a>
+		</li>
+		<li><a  href="../astrology/vargas.html">Vargas (Divisions)</a>
+		</li>
+		<li><a  href="../astrology/hora.html">Hora</a>
+		</li>
+		<li><a  href="../astrology/nakshatra.html">Nakshatras</a>
+		</li>
+		<li><a  href="../astrology/kpastrology.html">Krishnamurti Paddhati</a>
+		</li>
+		<li><a  href="../astrology/kalavelas.html">Upagrahas and Kala Velas</a>
+		</li>
+		<li><a  href="../astrology/drishti.html">Drishtis (Aspects)</a>
+		</li>
+		<li><a  href="../astrology/jaimini.html">Jaimini Astrology</a>
+		</li>
+		<li><a  href="../astrology/ashtakavarga.html">Ashtakavarga</a>
+		</li>
+		<li><a  href="../astrology/dasas.html">Nakshatra Dasas</a>
+		</li>
+		<li><a  href="../astrology/kalachakra.html">Kalachakra Dasa</a>
+		</li>
+		<li><a  href="../astrology/astakoota.html">Asta Koota</a>
+		</li>
+		<li><a  href="../astrology/sbc.html">Sarvatobhadra</a>
+		</li>
+		<li><a  href="../astrology/shadbala.html">Shadbala</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>Calculation Options</h1>
+<p>This chapter describes standard calculation options available in
+<em>Maitreya</em>.</p>
+<p>The calculation options influence the calculation results and should
+therefore be handled <strong>carefully</strong>. Parts of the options (e.g. ephemeris
+time option) are pure research features and should not be used for
+standard calculation.</p>
+<h2>Universal and Ephemeris Time</h2>
+<p>Universal time is the Greenwich mean time. Ephemeris time is a technical
+time which is internally used for ephemeris calculations.</p>
+<p>The difference between UT and ET can be about one minute of time.</p>
+<p>The ephemeris time option can be used to compare the data of Maitreya
+with standard ephemeris data, e.g. Rosicrucian Ephemeris.</p>
+<p>It is recommended to use UT for astrological calculations. ET option is
+a research feature.</p>
+<h2>Geocentric and Topocentric Coordinates</h2>
+<p>Geocentric calculation assumes the center of the earth as reference
+point. Topocentric coordinates assume the birth location as reference
+point.</p>
+<p>Difference between normal and topocentric coordinates can be up to 1
+degree for the Moon. So this option has big influence e.g. on Dasa
+calculations.</p>
+<p><strong>Note:</strong> The software only takes into account the longitude and
+latitude of the birth place. The altitude of the location is neglected.
+This may give an error of about 2 seconds of arc.</p>
+<h2>Apparent and True Positions</h2>
+<p>Apparent positions are the positions where we see the planets in the
+sky. True positions are &quot;real&quot; positions in the sense that aberrations
+due to relativistic effects, etc. are taken into account.</p>
+<p>The difference between apparent and true positions is quite small.</p>
+<p>Most astrologers (and ephemerids) use apparent positions.</p>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../astrology/calculation.html">↑ Calculation</a><a class="button is-small" href="../astrology/calc_ephemfiles.html">Ephemeris Data Files →</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2012-01-26.
+			</div>
+		</footer>
+	</body>
+</html>
+

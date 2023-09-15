@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [shape=record]
+	root [label="View: Vedic Simple"]
+	"1fba5dd8-9710-4585-ad39-b038cdb72bf7" [label="Splitter: Vertical"]
+	root -> "1fba5dd8-9710-4585-ad39-b038cdb72bf7" [overlap=false]
+	"616385e2-e33f-40e7-ad52-eeec9f3de940" [label="Widget: planets"]
+	"1fba5dd8-9710-4585-ad39-b038cdb72bf7" -> "616385e2-e33f-40e7-ad52-eeec9f3de940" [overlap=false]
+	"bf7a60c4-9805-4763-9212-7d0195c4daab" [label="Splitter: Vertical"]
+	"1fba5dd8-9710-4585-ad39-b038cdb72bf7" -> "bf7a60c4-9805-4763-9212-7d0195c4daab" [overlap=false]
+	"d9b31d94-b068-4bd4-97ba-508df978b906" [label="Widget: grid|{D-1|D-9}"]
+	"bf7a60c4-9805-4763-9212-7d0195c4daab" -> "d9b31d94-b068-4bd4-97ba-508df978b906" [overlap=false]
+	"8559750f-2904-4b76-95ea-64e83b3d7d01" [label="Widget: dasa"]
+	"bf7a60c4-9805-4763-9212-7d0195c4daab" -> "8559750f-2904-4b76-95ea-64e83b3d7d01" [overlap=false]
+}

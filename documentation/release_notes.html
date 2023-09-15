@@ -1,0 +1,365 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: Release Notes</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../release_notes.html">Release Notes</a></li>
+		<li><a href="../basics.html">Basics</a></li>
+		<li><a href="../documentation.html">Documentation</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/basics.html">Basics</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/license.html">License</a>
+		</li>
+		<li><a class ='is-active' href="../documentation/release_notes.html">Release Notes</a>
+		</li>
+		<li><a  href="../documentation/installation.html">Installation</a>
+		</li>
+		<li><a  href="../documentation/gettingstarted.html">Getting Started</a>
+		</li>
+		<li><a  href="../documentation/shortcuts.html">Shortcuts</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../documentation/views.html">Views</a>
+		</li>
+		<li><a  href="../documentation/config.html">Configuration</a>
+		</li>
+		<li><a  href="../documentation/miscellaneous.html">Miscellaneous</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>Release Notes</h1>
+<p>This chapter summarizes the main changes of the releases. Please refer
+to the news section for detailed information about minor releases,
+release dates, bug fixes etc.</p>
+<h2><a id="release80"></a>Release 8.0</h2>
+<h3>Vedic Astrology</h3>
+<ul>
+<li>Shadbala view added</li>
+<li>Dasa tree view: signification of Mahadasas and Antardasas can be
+displayed according to the scriptures, currently Parasara and Phala
+Deepika</li>
+<li>Solar chart: Vimsottari Dasa and Muntha added, Vedic mode.</li>
+<li>Vedic partner astrology: Rajju Koota added.</li>
+</ul>
+<h3>General Astrology</h3>
+<ul>
+<li>Additional planetary attributes can be displayed: element, quality,
+Antiscia, 90 and 45 deg circle (western), basic signification
+(vedic)</li>
+</ul>
+<h3>Uranian Astrology</h3>
+<ul>
+<li>Tables for sums, differences, midpoints of Antiscia and reflection
+points of pairs added.</li>
+<li>Events of these types can be viewed in UranianView, Transit and
+PartnerView.</li>
+<li>New modes in transit view: shifted Meridian, shifted gravitation
+point, reverse Solar arc</li>
+</ul>
+<h3>User Interface</h3>
+<ul>
+<li>Vedic chart: aspects (Rasi and Graha drishti) can be displayed on
+(shift+, ctrl+) mouse over</li>
+<li>Vedic chart: basic signification of Varga charts can be displayed
+with the chart</li>
+<li>Western chart: magnify aspects and corresponding planets on mouse
+over</li>
+<li>New styles for vedic and western charts (yet to be completed)</li>
+<li>Configuration dialog improved. Data can be saved per tab. Restore
+defaults now possible.</li>
+<li>New font, nicer astrological glyphs</li>
+<li>Graphical Dasa: highlight of Dasas on mouse over. Simplified acess
+for zoom (Ctrl+mouse wheel) and Antardasa mode (Shift+mouse wheel)</li>
+</ul>
+<h3>Calculation</h3>
+<ul>
+<li>Support for Julian and Gregorian dates on birth data input. Support
+for input years BC added.</li>
+<li>Location database updated, includes now 164K cities.</li>
+</ul>
+<h3>Technical</h3>
+<ul>
+<li>XML based configuration migrated to JSON. Old custom XML Yoga
+definition files can be converted in Yoga Editor.</li>
+<li>Linux: Debian package is now for Ubuntu 16.04 64 bit.</li>
+<li>Swiss Ephemeris can be used (as shared library) from the installed
+system if provided. Applies to Debian Linux and derivates.</li>
+<li>Textclient for UNIX-like systems renamed, name is now <em>maitreya8t</em>
+</li>
+<li>Support for MS Visual Studio environment discontinued</li>
+</ul>
+<h2><a id="release70"></a>Release 7.0</h2>
+<h2>Major Changes</h2>
+<ul>
+<li>New location database based upon
+<a href="http://www.geonames.org">geonames.org</a>. Large number of worldwide
+locations (120K), 350K alias names.</li>
+<li>Several new chart graphics, e.g. colored chart backgrounds,
+rectangular and elliptic charts in western astrology.</li>
+<li>TransitView: transits in western mode can be shown inside or outside
+the radix chart. Time zone can be configured. Several bugs fixed.</li>
+<li>Support for dynamic daylight saving change: Ephemeris, Transit View,
+Eclipse and Hora View.</li>
+<li>New Dasa representation in compact tabular view</li>
+</ul>
+<h3>General Changes</h3>
+<ul>
+<li>All platforms are integrated in a single release, i.e. MacOS version
+is now part of the stable release.</li>
+<li>New binary package platforms for Linux: supported are now current 32
+bit versions of Mint LTS (Maya), Ubuntu LTS (Precise), and Redhat,
+CentOS, Fedora</li>
+<li>Input errors are displayed in user input dialogs</li>
+<li>Configuration panel for new atlas aka location database</li>
+<li>Font configuration: PDF fonts can be selected separately</li>
+<li>New configation for planet, sign and house colors</li>
+<li>Tamil translation (partly)</li>
+<li>Various bugs of version 6 fixed</li>
+</ul>
+<h2><a id="release60"></a>Release 6.0</h2>
+<h2>Major Changes</h2>
+<ul>
+<li>Improved transit view with double western/Vedic chart and
+Sarvatobhadra in all modes (transit, Solar, direction etc).
+Animation of transits on the time axis supported.</li>
+<li>Extended partner view with double western/Vedic chart, Sarvatobhadra
+and mixed Varga charts.</li>
+<li>Yoga editor for custom Yoga definitions.</li>
+<li>Arabic Parts (Fortune etc.). Parts can be displayed in graphical
+charts, Vargas etc.</li>
+<li>Uranian astrology refactored and available in western and Vedic
+view. Astrological objects can be configured now.</li>
+</ul>
+<h2>Medium and Minor Changes</h2>
+<ul>
+<li>Configuration of colors for planets, signs, aspects.</li>
+<li>Improved aspect configuration, colors, aspect symbols and styles.
+Many new aspects can be configured (Quintile, Septile, Novile,
+declination).</li>
+<li>Styles now supported for Sarvatobhadra chart (like in western/Vedic
+chart). All objects can be shown in Sbc.</li>
+<li>New coordiantes in charts: equatorial, barycentric and heliocentric.</li>
+<li>New object: Sphuta Navamsa Lagna.</li>
+<li>New styles for western chart with big symbols, new symbol set for
+signs.</li>
+<li>New simplified shortcuts.</li>
+<li>New Yogas: Non luminous planets (Parasara ch. 25), Planets in houses
+including Nodes from Phala Deepika ch. 8.</li>
+</ul>
+<h2>Other Changes</h2>
+<p>These features are not visible from the astrologer's point of view but
+have impact on development.</p>
+<ul>
+<li>New license: GPL (the software stays <em>free and Open Source</em>)</li>
+<li>XML based configs for charts, printout, colors and Yogas.</li>
+<li>Directory structure after 'make install' according GNU conventions.</li>
+<li>New Debian package for Linux/Ubuntu users.</li>
+<li>File based storage of configuration under Windows (UNIX-like)
+instead of Windows Registry.</li>
+</ul>
+<h2><a id="release50"></a>Release 5.0</h2>
+<h2>Major Changes</h2>
+<ul>
+<li>Yoga view shows planetary events according to classical scriptures
+(Parasara, Saravali, Brihat Jataka). Support for higher Vargas.</li>
+<li>Support for astrological scripting language (MDL = <em>Maitreya
+definition language</em>). This language is used to define astrological
+events and their effects.</li>
+<li>Ashtaka Varga view with diagrams (Rasi and Graha summary) and
+graphical charts for Rekha, Trikona and Ekadhipatya Shodana (all
+Vargas). Several options for AV calculation.</li>
+<li>Varga overview with diagram of Vimsopaka Bala and grouped charts.</li>
+<li>Improved Vedic chart with styles (like western chart in version 4.2)</li>
+<li>All astrological objects are available in both Vedic and western
+view (including Kala Velas, Upagrahas, Uranian planets, planetoids).</li>
+</ul>
+<h2>Minor Changes</h2>
+<ul>
+<li>Configuration dialog rewritten.</li>
+<li>Configuration of individual aspect types and orbes in western chart.</li>
+<li>Display options for lords and dignities in planetary list.</li>
+<li>Kala Vela configuration support (lords, portions, Gulika can be
+included now).</li>
+<li>Buttons in main toolbar can be configured now.</li>
+<li>Custom footer in PDF printout (can be used for name of astrologer
+etc.)</li>
+<li>Graphical/textual display of planets and signs in graphical Dasa
+view.</li>
+<li>Multiple chart views added in partner view and Tajaka view.</li>
+<li>Support for Krusinski house system.</li>
+<li>Italian translation.</li>
+<li>Default house system for Vedic astrology is now <em>Placidus</em>. K.P:
+style house system ist default, too.</li>
+<li>Better support for development on MS Windows. The software builds
+now on MS Visual Studio Express.</li>
+<li>Full support for wxWidgets 2.8 on all platforms. wx 2.6 is
+deprecated now. Windows installer comes with latest 2.8 release.</li>
+</ul>
+<hr />
+<h2><a id="release42"></a>Release 4.2</h2>
+<ul>
+<li>Symbols for signs, planets and aspects in western and Vedic
+astrology.</li>
+<li>Support for new astronomical objects: Chiron, Pholus, Lilith (Black
+Moon) and 4 planetoids Ceres, Pallas, Juno, Vesta</li>
+<li>Strongly improved western graphic chart. Styles can configured,
+colors, pictures, etc.</li>
+<li>Support for Pratyantardasas in graphical Dasa view; display of
+periods on mouse-over event.</li>
+<li>Vedic names of signs and planets are supported now</li>
+<li>Polish language support.</li>
+</ul>
+<h3>Remarks</h3>
+<ul>
+<li>Installation of version 4.2 requires manual font installation on
+Linux/Unix, see the <a href="../documentation/font.html">Symbol Font</a> page</li>
+</ul>
+<hr />
+<h2><a id="release41"></a>Release 4.1</h2>
+<ol>
+<li>Telugu language support.</li>
+<li>Improved location database, mouse wheel, double click, etc. are
+supported now.</li>
+<li>Support for Indian display of planetary positions (like 00-10-20
+instead of 10-20 Aries).</li>
+<li>Suport for Legal and Letter paper format.</li>
+<li>Improved Sarvatobhadra (Unicode)</li>
+<li>Bugs of version 4.0 (Lagna Vimsottari and configuration errors)
+fixed.</li>
+<li>Compilation errors on GNU gcc 4.1 (&quot;invalid extra qualification&quot;)
+fixed.</li>
+<li>Several minor changes.</li>
+</ol>
+<hr />
+<h2><a id="release40"></a>Release 4.0</h2>
+<h2>Dasas</h2>
+<ol>
+<li>Graphical Dasa view showing the Dasas on the time axis. This view
+allows to get a synchronous overview of different Dasas.</li>
+<li>New text view of Dasas showing Mahadasas and Antardasas in
+comprehensive tabular form.</li>
+<li>Entry charts can be created for the starting point of all Dasas.</li>
+</ol>
+<h2>Solar/Tajaka Chart</h2>
+<p>Solar/Tajaka charts are supported in Vedic and western mode. It is
+possible to create new documents based on Solar charts and to analyse
+them like normal charts.</p>
+<h2>Ephemeris</h2>
+<ol>
+<li>Graphical Ephemeris in different circles like 360 deg, 90 deg or
+Nakshatra view (13:20).</li>
+<li>Ingress Events of the planets are supported for signs and
+Nakshatras.</li>
+<li>The Krishnamurti view calculates the starting events of lord/sublord
+periods.</li>
+<li>Sunrise, sunset, sidereal time and Tithi (Vedic date) are supported.</li>
+<li>Lunar phases and start of Tithis can be shown in another view.</li>
+</ol>
+<h2>Printout</h2>
+<p>The printout is completely rewritten. Printout is done in PDF format and
+viewing/printing is delegated to the PDF viewer (like Acrobat Reader or
+xpdf).</p>
+<p>Different printout types can be configured. This new feature allows e.g.
+a multi page printout with several Vargas or Dasas.</p>
+<h2>Partner Chart</h2>
+<p>The partner view supports the Composite chart. This kind of chart is
+based upon the midpoints of two charts.</p>
+<h1>Further Changes</h1>
+<p>Here is a list of further changes/enhancements since version 3.2.</p>
+<ol>
+<li>Russian language support.</li>
+<li>All text windows can be shown in HTML or plain text. Text export can
+be done in these two formats, too.</li>
+<li>Fonts and colors can be configured.</li>
+<li>Graphical Export of Charts: there are 3 new formats: TIF, PNM and
+PCX. The gif format has been removed.</li>
+<li>The main window list control can be shown in three different modes:
+Big icons (3.x style), small icons and report view.</li>
+<li>A context menu in the main window control gives access to several
+application commands.</li>
+<li>Several new house systems have been added.</li>
+<li>K.P. support for general Nakshatra Dasas (not only Vimsottari). This
+is intended to be an advanced research feature.</li>
+</ol>
+<h1>Removed Features</h1>
+<p>The following features have been removed.</p>
+<ol>
+<li>Narayana and Lagna Kendradi Dasa.</li>
+<li>Unusual Ayanamsas. Only the standard Ayanamsas are left: Lahiri,
+Raman, Krishnamurti and custom Ayanamsa.</li>
+</ol>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../documentation/license.html">← License</a><a class="button is-small" href="../documentation/basics.html">↑ Basics</a><a class="button is-small" href="../documentation/installation.html">Installation →</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2022-12-15.
+			</div>
+		</footer>
+	</body>
+</html>
+

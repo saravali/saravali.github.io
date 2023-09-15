@@ -1,0 +1,309 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: General Configuration</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+		<link href="../../css/lightbox.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link">Related</a>
+
+				<div class="navbar-dropdown is-right"> <a class="navbar-item" href="../documentation/atlas_database.html">Atlas Database</a> <a class="navbar-item" href="../astrology/ayanamsa.html">Ayanamsa</a> <a class="navbar-item" href="../astrology/objects.html">Astrological Objects</a> <a class="navbar-item" href="../astrology/calculation.html">Calculation</a> <a class="navbar-item" href="../documentation/print.html">Printing Charts</a>				</div> <!-- navbar-dropdown -->
+			</div> <!-- navbar-item -->
+		</div> <!-- navbar-end -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../config_general.html">General Configuration</a></li>
+		<li><a href="../config.html">Configuration</a></li>
+		<li><a href="../documentation.html">Documentation</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/basics.html">Basics</a>
+		</li>
+		<li><a  href="../documentation/views.html">Views</a>
+		</li>
+		<li><a  href="../documentation/config.html">Configuration</a>
+	<ul class="menu-list">
+		<li><a class ='is-active' href="../documentation/config_general.html">General Configuration</a>
+		</li>
+		<li><a  href="../documentation/config_ui.html">User Interface Configuration</a>
+		</li>
+		<li><a  href="../documentation/config_vedic.html">Configuration: Vedic Astrology</a>
+		</li>
+		<li><a  href="../documentation/config_western.html">Configuration: Western Astrology</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../documentation/miscellaneous.html">Miscellaneous</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>General Configuration</h1>
+<p><a data-lightbox="box1" data-title="" href="../../images/config_general.png"><img alt="image" src="../../images/config_general_s.jpg"/></a></p>
+<h3>Default Style</h3>
+<p>Default Style - whether new horoscopes will have Vedic or western style
+as standard.</p>
+<p>Many views have the option to change the type later.</p>
+<blockquote>
+<h4>Shortcuts</h4>
+<p>Keyboard</p>
+<ul>
+<li>V: change to Vedic mode</li>
+<li>W: change to western mode<br />
+Mouse actions</li>
+<li>Right click into the view, open context menu and chose <em>Vedic Mode</em> or <em>Western Mode</em>
+</li>
+</ul>
+</blockquote>
+<h3>Language</h3>
+<p>This option is only active under Windows. On other platforms the chosen
+language will be shown in the disabled choice box. More informations
+about language setup can be found on the <a href="../documentation/translation.html">Translation</a>
+page.</p>
+<h3>Window Life Cycle</h3>
+<ul>
+<li>Open new document on startup - a new document (with current date,
+default location) will be opened on application startup if this
+option is checked.</li>
+<li>Ask on quit. You will be asked before the application is closed if
+this option is checked.</li>
+</ul>
+<h2>Standard Location</h2>
+<p>The standard location will be used for all new charts, for the Hora
+window, Ephemeris, Transit window and the status bar info.</p>
+<p>You can open the atlas dialog if you click the button <em>Search Location</em>.
+Alternatively you can enter the first letters of a location name and
+type <em>Enter</em>.</p>
+<p>Time zone and daylight savings values are shown on the right side. These
+values are read only and taken from the system configuration.</p>
+<hr />
+<p><a data-lightbox="box1" data-title="" href="../../images/config_ephem.png"><img alt="image" src="../../images/config_ephem_s.jpg"/></a></p>
+<h2><a id="ephem"></a>Ephemeris</h2>
+<h3>Custom Ayanamsa</h3>
+<p>See the <a href="../astrology/ayanamsa.html">Ayanamsa</a> section.</p>
+<p>A instruction for installation of the data files can be found in the
+section on <a href="../astrology/calc_ephemfiles.html">Ephemeris Data Files</a>.</p>
+<h3>Calculation Options</h3>
+<p>Calculation options are described in detail at the
+<a href="../astrology/calc_options.html">Calculation Options</a> section.</p>
+<blockquote>
+<h4>Dangerous</h4>
+<p>Calculation options are sensitive parameters! You should not change them if you are not sure what you do!</p>
+</blockquote>
+<h3>Sunrise and Sunset</h3>
+<p>These options take effect for special Lagnas, Kala Velas and Hora
+calculation. The difference between the option will be about several
+minutes of time.</p>
+<h3>Reference Point</h3>
+<p>Whether the center or the border of the disk shall be in the horizon at
+sunrise/sunset time.</p>
+<h3>Use Refraction</h3>
+<p>Refraction is an optical phenomenon that is based upon the curvature of
+the sunlight in the atmosphere. Refraction will be taken into account if
+you check this option (apparent position).</p>
+<hr />
+<p><a data-lightbox="box1" data-title="" href="../../images/config_mview.png"><img alt="image" src="../../images/config_mview_s.jpg"/></a></p>
+<h2><a id="mview"></a>Multiple Views</h2>
+<h3>Default View Type</h3>
+<p>This choice box determines if new chart are opend in single or multiple
+view mode.</p>
+<h3>Multiple View Selection</h3>
+<p>There are several multiple view types for Vedic resp. western
+astrologers. Each type has a short description in the text box below.</p>
+<h3>Notebooks in Multiple Views</h3>
+<p>The notebook type and orientation can be changed with this option.
+Changes only apply if a new window is opened.</p>
+<hr />
+<p><a data-lightbox="box1" data-title="" href="../../images/config_atlas.png"><img alt="image" src="../../images/config_atlas_s.jpg"/></a></p>
+<h2><a id="atlas"></a>Atlas</h2>
+<p>The atlas dialog is described on the <a href="../documentation/dialogs.html#atlasdialog">Atlas Dialog</a>
+page.</p>
+<h3>Atlas Database File</h3>
+<p>The atlas data is stored in a SQLite 3 database, see the
+<a href="../documentation/atlas_database.html">Atlas Database</a> page.</p>
+<p>The panel below the input field shows if the selected file is valid.</p>
+<h3>Atlas Import</h3>
+<p>The atlas database can be imported from a SQL file.</p>
+<p>The default import file is located in the directory
+&quot;atlas/geonames1000.sql&quot;. It contains an extract of the geonames.org
+atlas DB (worldwide cities with more than 1000 inhabitants).</p>
+<p>Supported import formats are</p>
+<ul>
+<li>SQLite 3 dumps in plain SQL format</li>
+<li>Zipped SQLite 3 dumps</li>
+</ul>
+<p>The import can be canceled while running. The database will quite likely
+be invalid then. Backups are stored according to the configuration in
+the <a href="../documentation/config_general.html#misc">Miscellaneous</a> tab (no backup/single
+backup/infinite backups).</p>
+<h3><a id="countries"></a>Country List</h3>
+<p>The atlas database stores about 250 worldwide countries. The country
+list in the Atlas Dialog has only a selection of favourite countries.</p>
+<p>The button &quot;change countries&quot; opens a dialog for the configuration of
+favourite countries.</p>
+<p>This feature works only if a valid database file is selected.</p>
+<hr />
+<p><a data-lightbox="box1" data-title="" href="../../images/config_print.png"><img alt="image" src="../../images/config_print_s.jpg"/></a></p>
+<h2><a id="print"></a>Printout</h2>
+<blockquote>
+<h4>Out Of Date</h4>
+</blockquote>
+<p>You can find the description of the print feature on the
+<a href="../documentation/print.html">Printing Charts</a> page.</p>
+<h3>Default Printout</h3>
+<p>One of the pre-configured printouts can be selected. The panel below
+shows a short description of the printout.</p>
+<h3>Options for Printout</h3>
+<p>Chart style - choose the desired chart style (graphical charts in
+Vedic/western mode) for printout.</p>
+<p>Paper format - choose the desired paper format for the PDF output.</p>
+<p>Ask on owerwrite - whether a dialog prompt will be shown before existing
+PDF files are overwritten.</p>
+<h3>Footer in PDF Output</h3>
+<p>You can configure if a custom footer will be printed in the PDF output.</p>
+<p>This option can be used to print additional information (like name of
+astrologer) in the PDF documents. The footer will be printed at the
+bottom of the first page.</p>
+<p>You can use pre-defined variables to print additional information on the
+fly</p>
+<ul>
+<li>%version - the version of the program will be shown.</li>
+<li>%date- the date of printout creation will be shown.</li>
+</ul>
+<h3>Launching the Pdf Viewer</h3>
+<p>You can configure if you want to launch a Pdf viewer after creation of
+Pdf printouts. The startup of the viewer depends on your operating
+system.</p>
+<ul>
+<li>Windows Systems - the default viewer of the operating system (e.g.
+Acrobat Reader) will be started.</li>
+<li>Linux/4.4 BSD - some standard viewers (like xpdf or kghostview) will be
+searched along the path. The viewer can be configured in the
+<em>command</em> text field.</li>
+<li>Mac OS X: PDF will be opened with the built-in preview</li>
+</ul>
+<hr />
+<p><a data-lightbox="box1" data-title="" href="../../images/config_animation.png"><img alt="image" src="../../images/config_animation_s.jpg"/></a></p>
+<h2><a id="animation"></a>Animation</h2>
+<hr />
+<p>These options influence the step intervals and step widths for animated
+charts.</p>
+<blockquote>
+<h4>Shortcuts</h4>
+<p>Keyboard</p>
+<ul>
+<li>Shift+Ctrl+A: toggle animation<br />
+Mouse actions</li>
+<li>Right click into the view, open context menu and chose <em>Animate Chart</em>
+</li>
+</ul>
+</blockquote>
+<h3>Mode</h3>
+<p>The following options are available</p>
+<ul>
+<li>System Time - means that on every update the chart will set to the
+actual system time.</li>
+<li>Custom Steps - a fixed value will be added to the base time. This
+value can be configured in the control below.</li>
+</ul>
+<h3>Frequency</h3>
+<p>The animation frequency determines the update interval, e.g. a value of
+5 sec. means that every 5 seconds the chart and its dependent windows
+will be updated.</p>
+<h3>Step Length</h3>
+<p>The step length (only available for custom steps) determines the value
+that is added on each update. You can choose a number and a
+multiplicator like seconds, days, etc.</p>
+<hr />
+<p><a data-lightbox="box1" data-title="" href="../../images/config_misc.png"><img alt="image" src="../../images/config_misc_s.jpg"/></a></p>
+<h2><a id="misc"></a>Miscellaneous</h2>
+<p>This tab contains general options that influence the general behaviour of the
+application.</p>
+<h3>Miscellaneous</h3>
+<ul>
+<li>Running Objects in Status Bar - whether the actual positions of
+Ascendant and Moon will be displayed in the status bar.</li>
+<li>Maximum of Recent Files - maximum number of entries in the
+<em>File-&gt;Recent</em> menu.</li>
+</ul>
+<h3>Backups of Location DB</h3>
+<p>Configure if you want the program to create backups of the location
+database. Options are</p>
+<ul>
+<li>Never - no backups will be made.</li>
+<li>One - only one backup (named locations.bak) will be made.</li>
+<li>Infinite - a backup will be made each time you save the database,
+the backup will be named locations.YYYYDDMMHHMMSS</li>
+</ul>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../documentation/config.html">↑ Configuration</a><a class="button is-small" href="../documentation/config_ui.html">User Interface Configuration →</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2022-12-23.
+			</div>
+		</footer>
+	</body>
+
+	<script src="/js/lightbox-plus-jquery.min.js"></script>
+</html>
+

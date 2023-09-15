@@ -1,0 +1,297 @@
+
+
+
+
+wrong link "chart_penbrush#pens" in page "dialogs"<p>wrong link "chart_penbrush#brushes" in page "dialogs"<p><!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Saravali: Dialogs</title>
+		<link href="../../css/saravali.css" rel="stylesheet">
+		<link href="../../css/lightbox.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!-- start navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div> <!-- navbar-brand -->
+
+	<div id="nav-menu" class="navbar-menu">
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link">Related</a>
+
+				<div class="navbar-dropdown is-right"> <a class="navbar-item" href="../documentation/config_general.html">General Configuration</a> <a class="navbar-item" href="../documentation/atlas_database.html">Atlas Database</a>				</div> <!-- navbar-dropdown -->
+			</div> <!-- navbar-item -->
+		</div> <!-- navbar-end -->
+	</div> <!-- navbar-menu -->
+</nav> <!-- navbar -->
+<nav class="breadcrumb has-bullet-separator is-right" aria-label="breadcrumbs">
+	<ul>
+		<li class="is-active"><a href="../dialogs.html">Dialogs</a></li>
+		<li><a href="../views.html">Views</a></li>
+		<li><a href="../documentation.html">Documentation</a></li>
+		<li><a href="../index.html">Home</a></li>
+	</ul>
+</nav>
+	<div class="columns">
+		<div class="column is-narrow is-hidden-mobile">
+	<aside class="menu">
+		<p class="menu-label">
+			Menu
+			</p>
+	<ul class="menu-list">
+		<li><a  href="../index.html">Home</a>
+		</li>
+		<li><a  href="../download.html">Download</a>
+		</li>
+		<li><a  href="../documentation.html">Documentation</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/basics.html">Basics</a>
+		</li>
+		<li><a  href="../documentation/views.html">Views</a>
+	<ul class="menu-list">
+		<li><a  href="../documentation/generalviews.html">General Views</a>
+		</li>
+		<li><a  href="../documentation/vedicviews.html">Vedic Views</a>
+		</li>
+		<li><a  href="../documentation/westernviews.html">Western Views</a>
+		</li>
+		<li><a  href="../documentation/otherviews.html">Other Astrological Views</a>
+		</li>
+		<li><a class ='is-active' href="../documentation/dialogs.html">Dialogs</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../documentation/config.html">Configuration</a>
+		</li>
+		<li><a  href="../documentation/miscellaneous.html">Miscellaneous</a>
+		</li>
+	</ul>
+		</li>
+		<li><a  href="../astrology.html">Astrology</a>
+		</li>
+		<li><a  href="../about.html">About</a>
+		</li>
+		<li><a  href="../sitemap.html">Sitemap</a>
+		</li>
+	</ul>
+	</aside>
+		</div>
+		<div class="column">
+
+			<div class="content">
+				<h1>Dialogs</h1>
+<p><a data-lightbox="box1" data-title="" href="../../images/datadialog.png"><img alt="image" src="../../images/datadialog_s.jpg"/></a></p>
+<h2><a id="datadialog"></a>Data Dialog</h2>
+<p>The data dialog is used for birth data input and is the most important dialog
+for creation of new charts.</p>
+<p>New charts have the current date and default location (entered in Configuration dialog tab <a href="../documentation/config_general.html">General Configuration</a>.
+Daylight saving time (DST) is read from internal system settings.</p>
+<h3>Date and Time Input Fields</h3>
+<p>The format is <strong>YYYY-MM-DD</strong>, i.e.year - month - day. Local country formats are not supported.</p>
+<p>The input box supports scrolling, so the up and down buttons on the right side can be used for scrolling,
+arrow (↑ and ↓) keys work as well.
+The scroll rate depends on the cursor position: if the cursor is placed in the year, month etc. section,
+the corresponding part will be increase and decreased.</p>
+<p>Dates before <em>Anno Domini</em> are supported and must be entered with negative year number.</p>
+<p>The time imput field has the format <strong>HH:MM:SS</strong> (24 hours). Minutes or seconds can be omitted and will
+be assumed as zero.
+There is no PM/AM, so hours must be entered in <strong>24 hour</strong> format.</p>
+<p>Both field test and format the input automatically when focus leaves. Errors are marked in red color.</p>
+<h4>Calendar</h4>
+<p>Gregorian and Julian Calendar are automatimatically used for the time of their validity</p>
+<ul>
+<li>Julian Calendar before October 1582</li>
+<li>Gregorian Calendar (default) for all later dates</li>
+</ul>
+<p>The read only text field under the input fields contains a summary of the entered date and should be read carefully
+to be sure that the calculated data is correct.</p>
+<h3>Location</h3>
+<p>New charts have the standard location as default.</p>
+<p>Location data can be read from the Location database. Just press the &quot;Location&quot; button to search the data.
+Data can be changed, e.g. if the coordinates shall be adjusted in case of big cities.</p>
+<p>Input format is <strong>DD:MM:SS</strong>. Minutes and seconds are not required and will be zero if not entered.</p>
+<p>Negative degree should not be entered but the North/South resp. East/West choice boxes should be used instead.</p>
+<h3>Time Zone and Daylight Saving</h3>
+<p>Time Zone and daylight saving are automatically filled when data is pasted from the location dialog.</p>
+<blockquote>
+<h4>Dangerous</h4>
+<p>Automatic DST values depend on the local settings of the operating system.<br />
+Please be sure that the automatic values are correct for the used location</p>
+</blockquote>
+<h3>Setting Local Time</h3>
+<p>Some (very old) horoscopes have local time instead of a common time zone.
+In these cases the local time can be calculated with the button on the right side.
+The time zone will then be calculated from the longitude of the location,
+and will therefore be no integer but a discrete value.
+Be sure that you press the button again if longitude is changed.</p>
+<hr />
+<p><a data-lightbox="box1" data-title="" href="../../images/atlasdialog.png"><img alt="image" src="../../images/atlasdialog_s.jpg"/></a></p>
+<h2><a id="atlasdialog"></a>Atlas Dialog</h2>
+<p>The built-in atlas is a database for a huge amount of wordlwide location
+data.</p>
+<p>This page describes the user interface of the Atlas Dialog.</p>
+<h3>Filter</h3>
+<p>The filter is ASCII case insensitive, i.e. uppercase and lowercase ASCII
+characters match. Special characters are <strong>case sensitive</strong>, e.g. German
+ü and Ü are distinct regarding filter matching.</p>
+<p>Supported filter wildcards are</p>
+<ul>
+<li>&quot;*&quot; and &quot;%&quot; match arbitrary character sequences.</li>
+<li>&quot;?&quot; and &quot;_&quot; match a single character.</li>
+</ul>
+<p>There is always an implicit &quot;*&quot; wildcard at the end of the filter
+string.</p>
+<h3>Country List</h3>
+<p>The database stores about 250 countries. So the country list in the
+Atlas Dialog has a selection of favourite countries.</p>
+<p>The favourite country list can be configured in the
+<a href="../documentation/config_general.html#atlas">Atlas</a> dialog.</p>
+<h3>Location Name Types</h3>
+<p>Atlas entries have 3 different types of names that can be configured in
+the choice box on the top right of the dialog</p>
+<ul>
+<li>Name: the proper name of the location in Unicode (UTF-8)
+representation</li>
+<li>Ascii Name: name restricted to the 26 character ASCII set. Special
+characters are replaced by ASCII chars. This option can be helpful
+for finding international locations that don't match your machine's
+character set.</li>
+<li>Alias Name: locations can have a lot of alias names (more than 200)</li>
+</ul>
+<h3>Managing Locations</h3>
+<p>Atlas entries can be edited</p>
+<ul>
+<li>Edit: attributes can be changed by the user</li>
+<li>New: the current entry will be copied and later be stored as new
+entry</li>
+<li>Delete: the current entry will be removed from the database</li>
+</ul>
+<p><strong>Notes</strong></p>
+<ol>
+<li>The countries in the &quot;Edit&quot; and &quot;New&quot; dialog are always filtered
+according to the configuration</li>
+<li>Admin codes and time zone choice depend on the selected country</li>
+</ol>
+<hr />
+<p><a data-lightbox="box1" data-title="" href="../../images/objectfilterdialog.png"><img alt="image" src="../../images/objectfilterdialog_s.jpg"/></a></p>
+<h2><a id="filterdialog"></a>Object Filter Dialog</h2>
+<p>This dialog is used in transit and Uranian views.</p>
+<p>There are some use cases where not all astrological objects should be included in calculation or representation.
+Examples are</p>
+<ul>
+<li>In long term transit analysis fast objects are not used, e.g. Meridian is confusing if you analyze transits for a whole year.</li>
+<li>For progressive charts sometime slow planets should be omitted because they do not change for short term analysis,
+but only fast objects are interesting, e.g. Moon and Ascendant.</li>
+<li>Another reason is not the speed but the interest of the astrologer who wants to focus on a single planet.</li>
+</ul>
+<p>The dialog has check boxes for all astrological objects that shall be used. If no object is checked (zero filter) all
+objects are used.</p>
+<p>The dialog has shortcuts to improve the speed in case of standard use cases</p>
+<ul>
+<li>Select all: desired planets can be delesected manually.</li>
+<li>Up to Mars: only faster objects will be used. Useful for progressive charts.</li>
+<li>Slower than Mars: useful for (long term) transit analysis</li>
+<li>Deselect all.</li>
+</ul>
+<hr />
+<p><a data-lightbox="box1" data-title="" href="../../images/brushdialog.png"><img alt="image" src="../../images/brushdialog_s.jpg"/></a></p>
+<h2><a id="brushdialog"></a>Brush Dialog</h2>
+<p>Brushes are background patterns that can be configured for several views.</p>
+<p>Attributes of brushes are</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Signification</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>fill color</td>
+<td>White</td>
+</tr>
+<tr>
+<td>style</td>
+<td>name of the fill style</td>
+<td>solid</td>
+</tr>
+<tr>
+<td>filename</td>
+<td>name of the image file, stipple style only</td>
+<td>empty</td>
+</tr>
+<tr>
+<td>rotatehue</td>
+<td>color adjustment, stipple style only</td>
+<td>0 (zero)</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="../index.html#pens">ERROR:chart_penbrush</a> section for details of brush configuration.</p>
+<hr />
+<p><a data-lightbox="box1" data-title="" href="../../images/pendialog.png"><img alt="image" src="../../images/pendialog_s.jpg"/></a></p>
+<h2><a id="pendialog"></a>Pen Dialog</h2>
+<p>Pens are line styles.</p>
+<p>Attibutes of pens are</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>line color</td>
+<td>Black</td>
+</tr>
+<tr>
+<td>width</td>
+<td>line width in pixel</td>
+<td>1</td>
+</tr>
+<tr>
+<td>style</td>
+<td>name of the line style</td>
+<td>solid</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="../index.html#brushes">ERROR:chart_penbrush</a> section for details of pen configuration.</p>
+
+			</div> <!-- content -->
+		</div>
+	</div>			<footer class="footer">
+
+		<!-- navigation buttons -->
+		<div class="container">
+			<div class="buttons are-medium">
+<a class="button is-small" href="../documentation/otherviews.html">← Other Astrological Views</a><a class="button is-small" href="../documentation/views.html">↑ Views</a>
+			</div>
+		</div>
+				<hr>
+			 <div class="content has-text-centered">
+				Website licensed under CC BY-SA 4.0.<br>
+				Last modification of this page 2022-12-16.
+			</div>
+		</footer>
+	</body>
+
+	<script src="/js/lightbox-plus-jquery.min.js"></script>
+</html>
+
