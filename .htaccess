@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule contact.html about.html
+Options -Indexes
