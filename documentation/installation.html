@@ -24,7 +24,7 @@
 	</div> <!-- navbar-brand -->
 
 	<div id="nav-menu" class="navbar-menu">
-		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
+		<div class="navbar-start"> <a class="navbar-item" href="../index.html">Home</a> <a class="navbar-item" href="../download.html">Download</a> <a class="navbar-item" href="../documentation.html">Documentation</a> <a class="navbar-item" href="../astrology.html">Astrology</a> <a class="navbar-item" href="../developer.html">Developer</a> <a class="navbar-item" href="../about.html">About</a>		</div> <!-- navbar-start -->
 		<div class="navbar-end">
 			<div class="navbar-item has-dropdown is-hoverable">
 				<a class="navbar-link">Related</a>
@@ -79,6 +79,8 @@
 		</li>
 		<li><a  href="../astrology.html">Astrology</a>
 		</li>
+		<li><a  href="../developer.html">Developer</a>
+		</li>
 		<li><a  href="../about.html">About</a>
 		</li>
 		<li><a  href="../sitemap.html">Sitemap</a>
@@ -123,8 +125,7 @@ likely be the default.</p>
 <p>You can also compile wx from source code, see the <a href="http://www.wxwidgets.org">wxWidgets Site</a>.</p>
 <p>Additional dependencies are</p>
 <ul>
-<li>
-<strong>Required</strong>: a C/C++ compiler, GNU compiler including g++ (C++
+<li><strong>Required</strong>: a C/C++ compiler, GNU compiler including g++ (C++
 extension) wil be the default on most systems. <em>clang</em> compiler
 should work as well.</li>
 <li>Development headers of fontconfig package</li>
@@ -162,24 +163,6 @@ follows</p>
 <li>copy the font to the default True Type font directory (e.g.
 /usr/share/fonts/truetype).</li>
 </ul>
-<h2><a id="debian"></a>Debian Linux and Derivatives</h2>
-<p>On Debian and derivates (Ubuntu, Mint etc.) there are packages for Swiss
-Ephemeris available.</p>
-<p>The binaries and headers are available in the packages <em>libswe0</em> resp.
-<em>libswe-dev</em>.</p>
-<p>The packages can be used for compilation of Maitreya.</p>
-<pre><code class="language-shell">export LIBSWE_CFLAGS=-I/usr/include  
-export LIBSWE_LIBS=&quot;-lswe&quot;  
-./configure --with-swe=system
-</code></pre>
-<p>Data files for the swiss ephemeris are available in the packages</p>
-<ul>
-<li>swe-standard-data</li>
-<li>swe-extra-data</li>
-</ul>
-<p>The data files will be installed under /usr/share/ephe. Maitreya will
-recognize the data files on startup and set the path to the directory
-automatically.</p>
 <h2>Arch Linux</h2>
 <p>Arch Linux can build from <a href="https://aur.archlinux.org/packages/maitreya/">AUR</a>.</p>
 <h2><a id="freebsd"></a>Free BSD</h2>
@@ -202,70 +185,35 @@ it manually instead: copy the font Saravali.ttf from the source
 directory src/fonts to /usr/local/lib/X11/fonts/TTF and restart the
 application.</p>
 <h2><a id="windows"></a>Windows Systems</h2>
-<p>Visual Studio is not supported any more.</p>
+<p>Visual Studio 2022 and Mingw are supported.</p>
+<h3><a id="msvc"></a> Visual Studio 2022</h3>
+<p>Compile wxWidgets with Visual Studio (workspace in e.g. build/msw/wx_vc17.sln).</p>
+<p>Set the environment variable WXWIDGETS to the appropriate directory (e.g. c:\wxWidgets-3.2.4).</p>
+<p>Open maitreya.sln. Make &quot;gui&quot; the start project and build.</p>
 <h3>MinGW</h3>
-<p>The compilation with MinGW is a bit more complicated.</p>
-<p><strong>First step:</strong> install MinGW. This is straight forward. Read the
-corresponding MingGW documentation.</p>
-<p><strong>Second step</strong>: Installation of wxWidgets</p>
-<p>Get the source code for wxWidgets from wxWidgets.org. You can fetch
-either the windows packages (like wx-msw) or the wxAll package. Unpack
-the source code. Documentation is under doc/msw.</p>
-<p>Go to the the root directory of the wxWidgets source code distribution.</p>
-<p>Type</p>
-<pre><code class="language-shell">./configure --disable-shared --enable-unicode  
-make  
-make install
-</code></pre>
-<p>You can also leave the option --disable-shared. You will then get a
-shared library of wxWidgets. The release will be bigger then.</p>
-<p>If everything goes well, you'll have a ready-to-use wxWidgets
-installation.</p>
-<p>You can test your installation by compiling one of the samples (e.g.
-sample minimal). Just go to the directory, type</p>
-<pre><code class="language-shell">make
-</code></pre>
-<p>and start the example.</p>
-<p><strong>Third step</strong>: Installation of Maitreya</p>
-<p>Create a directory for the source code tree, e.g. c:maitreya. Enter
-this directory.</p>
-<p>Unpack the source code archive</p>
-<pre><code class="language-shell">unzip maitreya-&lt;version&gt;.zip (zip file)  
-or  
-tar jxvf maitreya-&lt;version&gt;.tar.bz2 (bzip2 file)  
-etc.
-</code></pre>
+<p>Install MinGW. Read the documentation for details.</p>
+<p>Install gcc and wxWidgets with pacman.</p>
+<p>Unpack the Maitreya source code archive and enter the directory.</p>
 <p>Type</p>
 <pre><code class="language-shell">make -f Makefile.win
 </code></pre>
-<p>Hope that everything's going well.</p>
 <p>The executable (src/gui/maitreya8.exe) will be quite big. You can strip
 if you don't want debugging informations (strip src/gui/maitreya8.exe).</p>
 <h3>Command Line Interface</h3>
-<p>You can also build the command line interface, called 'textclient.exe' for
-historical reasons.</p>
+<p>You can also build the command line interface</p>
 <pre><code class="language-shell">cd src/jyotish  
-make -f Makefile.win textclient.exe
+make -f Makefile.win textclient
 </code></pre>
-<h3>Note</h3>
-<p>You need the MinGW DLL to start the program. So you can either start the
-program from the MinGW shell or you provide the files (one or more
-mingw*.dll) on the path.</p>
-<p>These files are located in the msys or mingw directory. You can e.g.
-copy them to the place where the executable is located.
-Probably you can also copy them to the windows directory, try it.</p>
 <h1>Compilation on Mac OS X</h1>
-<p>The program compiles and runs on Mac OS X Yosemite or later. GNU gcc and
-g++ are required (install xcode command line tools)</p>
-<p>The following steps work on Mac OS X Yosemite with wxWidgets-3.0.3:
-download wxWidgets source package, unpack it. Create folder for build,
+<p>GNU gcc and g++ are required (install xcode command line tools)</p>
+<p>download wxWidgets source package, unpack it. Create folder for build,
 change to folder and call configure and make</p>
-<pre><code class="language-shell">../configure --disable-shared --with-macosx-version-min=10.6  
+<pre><code class="language-shell">../configure --disable-shared
 make
 </code></pre>
 <p>Unpack the maitreya release and call configure and make.</p>
-<pre><code class="language-shell">export CC=&quot;gcc -mmacosx-version-min=10.6&quot;  
-export CXX=&quot;g++ -mmacosx-version-min=10.6&quot;  
+<pre><code class="language-shell">export CC=&quot;gcc&quot;
+export CXX=&quot;g++&quot;
 ./configure --with-wx-config=[path-to-wx-build]/wx-config  
 make
 </code></pre>
@@ -290,7 +238,7 @@ Finder.</p>
 				<hr>
 			 <div class="content has-text-centered">
 				Website licensed under CC BY-SA 4.0.<br>
-				Last modification of this page 2023-09-13.
+				Last modification of this page 2025-09-14.
 			</div>
 		</footer>
 	</body>
