@@ -25,7 +25,7 @@
 	</div> <!-- navbar-brand -->
 
 	<div id="nav-menu" class="navbar-menu">
-		<div class="navbar-start"> <a class="navbar-item is-active" href="index.html">Home</a> <a class="navbar-item" href="download.html">Download</a> <a class="navbar-item" href="documentation.html">Documentation</a> <a class="navbar-item" href="astrology.html">Astrology</a> <a class="navbar-item" href="about.html">About</a>		</div> <!-- navbar-start -->
+		<div class="navbar-start"> <a class="navbar-item is-active" href="index.html">Home</a> <a class="navbar-item" href="download.html">Download</a> <a class="navbar-item" href="documentation.html">Documentation</a> <a class="navbar-item" href="astrology.html">Astrology</a> <a class="navbar-item" href="developer.html">Developer</a> <a class="navbar-item" href="about.html">About</a>		</div> <!-- navbar-start -->
 		<div class="navbar-end">
 			<div class="navbar-item has-dropdown is-hoverable">
 				<a class="navbar-link">Related</a>
@@ -49,6 +49,8 @@
 		<li><a  href="documentation.html">Documentation</a>
 		</li>
 		<li><a  href="astrology.html">Astrology</a>
+		</li>
+		<li><a  href="developer.html">Developer</a>
 		</li>
 		<li><a  href="about.html">About</a>
 		</li>
@@ -81,11 +83,21 @@ Supported platforms are Windows, Max OS X, Linux and BSD.</p>
 <li>Uranian astrology: sensitive points and their events, annual predictions.</li>
 <li>Partner charts, ephemeris, eclipses, Hora.</li>
 </ul>
-<h2>Using the Software for the first time</h2>
-<p>Read the <a href="documentation/gettingstarted.html">Getting Started</a> guide before using it for the
-first time.</p>
 <hr />
 <h1>News</h1>
+<h2>Release 8.2 available (Sep 30 2025)</h2>
+<p>Several issues are fixed.</p>
+<ul>
+<li>Ashtakoota: wrong calculation of Dina (#83)</li>
+<li>Wrong time zone handling for tz &gt; 12 hours,  e.g. New Zealand (#85)</li>
+<li>Wrong display of Hora and Dina lord in Base Data view (#86)</li>
+<li>Crash in PartnerView/Synastry (Windows only)</li>
+<li>macOS: program crashed when brew is not installed.</li>
+<li>Several other bug fixes</li>
+</ul>
+<p>New feature: Visual Studio 2022 is now supported. See the
+<a href="documentation/installation.html#msvc"> Visual Studio 2022</a> section of the installation page for details.</p>
+<p>All binary packages use the latest wxWidgets version (3.2.8) .</p>
 <h2>Service Release 8.1.1 (May 6 2025)</h2>
 <p>This release affects only macOS and Linux users.</p>
 <ul>
@@ -120,7 +132,7 @@ first time.</p>
 				<hr>
 			 <div class="content has-text-centered">
 				Website licensed under CC BY-SA 4.0.<br>
-				Last modification of this page 2025-05-06.
+				Last modification of this page 2025-09-30.
 			</div>
 		</footer>
 	</body>
